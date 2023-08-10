@@ -53,12 +53,6 @@ export class AppNavbar extends React.Component<{
               </NavItem>
 
               <NavItem>
-                <NavLink active={tab0 === "champions"} href="#/champions">
-                  <i className="fa fa-fw fa-users" /> {l.topplayers}
-                </NavLink>
-              </NavItem>
-
-              <NavItem>
                 <NavLink href="#/options" active={tab0 === "options"}>
                   <i className="fa fa-fw fa-cogs" /> {l.options}
                 </NavLink>
