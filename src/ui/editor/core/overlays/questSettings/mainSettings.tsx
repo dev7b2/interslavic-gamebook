@@ -172,6 +172,7 @@ export function QuestMainSettings({ quest, setQuest }: QuestSettingsTabProps) {
           <textarea
             style={{
               resize: "none",
+              maxHeight: "200px",
             }}
             className={classNames("form-control h-100")}
             rows={12}
@@ -187,6 +188,7 @@ export function QuestMainSettings({ quest, setQuest }: QuestSettingsTabProps) {
           <textarea
             style={{
               resize: "none",
+              maxHeight: "200px",
             }}
             className={classNames("form-control h-100")}
             rows={12}

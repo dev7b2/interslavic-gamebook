@@ -203,7 +203,7 @@ export function LocationOverlay({
               className="form-control"
               value={paramId}
               size={16}
-              style={{ height: "100%" }}
+              style={{ maxHeight: "200px" }}
               onChange={(e) => setParamId(parseInt(e.target.value))}
             >
               {quest.params.map((param, idx) => {

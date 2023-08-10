@@ -255,7 +255,7 @@ export function JumpOverlay({
               className="form-control"
               value={paramId}
               size={17}
-              style={{ height: "100%" }}
+              style={{ maxHeight: "200px" }}
               onChange={(e) => setParamId(parseInt(e.target.value))}
             >
               {quest.params.map((param, idx) => {

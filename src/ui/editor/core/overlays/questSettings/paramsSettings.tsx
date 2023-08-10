@@ -412,7 +412,7 @@ export function QuestParamsSettings({ quest, setQuest }: QuestSettingsTabProps) 
           <select
             className="form-control"
             value={paramId}
-            size={22}
+            size={12}
             onChange={(e) => setParamId(parseInt(e.target.value))}
           >
             {quest.params.map((param, idx) => {
