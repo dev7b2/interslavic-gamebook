@@ -2,10 +2,10 @@ import { Lang } from "../lib/qmplayer/player";
 import { assertNever } from "../assertNever";
 
 const RUS = {
-  hi: "Поздрав, путник",
+  hi: "Поздрав, путник!",
   menu: "Меню",
   quests: "Квесты",
-  options: "Опции",
+  options: "Настројкы",
   installMode: "Приложение",
   installModeInstalling: "Загрузка",
   installModeNeedReload: "Готово обновление",
@@ -35,21 +35,21 @@ const RUS = {
   toStar: "В системе",
   defaultCompensation: "Награда за квест",
   enableBackButton: "Клавиша «Назад»",
-  backButtonDisabled: "Выключена (нормальный режим)",
-  backButtonEnabled: "Включена (читерский режим)",
+  backButtonDisabled: "Изкључена",
+  backButtonEnabled: "Вкључена (режим хытреца)",
 
   lang: "Азбука/Azbuka",
   rus: "Кирилица",
   eng: "Latinica",
 
-  save: "Сохранить",
+  save: "Записати",
   saving: "Сохраняю",
 
   welcomeHeader: "Добродошли в онлајнову книгу-игру!",
   all: "Все",
   own: "Загруженные",
-  search: "Поиск",
-  nothingFound: "Ничего не найдено",
+  search: "Исканје",
+  nothingFound: "Ничто не најдено",
   //startRandomUnpassed: "Выбрать случайный из непройденного",
   allQuestPassed: "Все квесты пройдены!",
 
@@ -136,10 +136,10 @@ const RUS = {
 export type LangTexts = typeof RUS;
 
 const ENG: LangTexts = {
-  hi: "Pozdrav, putnik",
+  hi: "Pozdrav, putnik!",
   menu: "Menu",
-  quests: "Quests",
-  options: "Option",
+  quests: "Kvesty",
+  options: "Nastrojky",
   installMode: "Application",
   installModeInstalling: "Downloading",
   installModeNeedReload: "Update ready",
@@ -169,21 +169,21 @@ const ENG: LangTexts = {
   toStar: "In the system",
   defaultCompensation: "Default compensation",
   enableBackButton: 'Klaviša "Nazad"',
-  backButtonDisabled: "Disabled (normal mode)",
-  backButtonEnabled: "Enabled (cheater mode)",
+  backButtonDisabled: "Izključena",
+  backButtonEnabled: "Vključena (režim hytreca)",
 
   lang: "Азбука/Azbuka",
   rus: "Кирилица",
   eng: "Latinica",
 
-  save: "Save",
+  save: "Zapisati",
   saving: "Saving",
 
   welcomeHeader: "Dobrodošli v onlajnovu knigu-igru!",
   all: "All",
   own: "Uploaded",
-  search: "Search",
-  nothingFound: "Nothing is found",
+  search: "Iskanje",
+  nothingFound: "Ničto ne najdeno",
   //startRandomUnpassed: "Choose a randome quest from those you have not completed",
   allQuestPassed: " All quests are completed!",
 
@@ -263,7 +263,7 @@ const ENG: LangTexts = {
   pwaInstallOk: "Application installation started!",
   pwaInstallNotOk: "Failed to install application",
 
-  editor: "Editor",
+  editor: "Redaktor",
 };
 
 export function getLang(lang: Lang) {
