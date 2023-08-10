@@ -43,7 +43,7 @@ export class OptionsTabContainer extends React.Component<
       <DivFadeinCss key="options" className="text-center my-3 container">
         <form>
           <div className="row">
-            <div className="form-group col-md-6">
+            {/* <div className="form-group col-md-6">
               <label>{l.ranger}</label>
               <input
                 type="text"
@@ -52,7 +52,7 @@ export class OptionsTabContainer extends React.Component<
                 value={player.Ranger}
                 onChange={(e) => updatePlayer("Ranger", e.target.value)}
               />
-            </div>
+            </div> */}
 
             <div className="form-group col-md-6">
               <label>{l.lang}</label>
@@ -66,7 +66,7 @@ export class OptionsTabContainer extends React.Component<
               </select>
             </div>
 
-            <div className="form-group col-md-6">
+            {/* <div className="form-group col-md-6">
               <label>{l.fromPlanet}</label>
               <input
                 type="text"
@@ -75,9 +75,9 @@ export class OptionsTabContainer extends React.Component<
                 value={player.FromPlanet}
                 onChange={(e) => updatePlayer("FromPlanet", e.target.value)}
               />
-            </div>
+            </div> */}
 
-            <div className="form-group col-md-6">
+            {/* <div className="form-group col-md-6">
               <label>{l.fromStar}</label>
               <input
                 type="text"
@@ -86,9 +86,9 @@ export class OptionsTabContainer extends React.Component<
                 value={player.FromStar}
                 onChange={(e) => updatePlayer("FromStar", e.target.value)}
               />
-            </div>
+            </div> */}
 
-            <div className="form-group col-md-6">
+            {/* <div className="form-group col-md-6">
               <label>{l.toPlanet}</label>
               <input
                 type="text"
@@ -97,9 +97,9 @@ export class OptionsTabContainer extends React.Component<
                 value={player.ToPlanet}
                 onChange={(e) => updatePlayer("ToPlanet", e.target.value)}
               />
-            </div>
+            </div> */}
 
-            <div className="form-group col-md-6">
+            {/* <div className="form-group col-md-6">
               <label>{l.toStar}</label>
               <input
                 type="text"
@@ -108,9 +108,9 @@ export class OptionsTabContainer extends React.Component<
                 value={player.ToStar}
                 onChange={(e) => updatePlayer("ToStar", e.target.value)}
               />
-            </div>
+            </div> */}
 
-            <div className="form-group col-md-6">
+            {/* <div className="form-group col-md-6">
               <label>{l.defaultCompensation}</label>
               <input
                 type="text"
@@ -119,7 +119,7 @@ export class OptionsTabContainer extends React.Component<
                 value={player.Money}
                 onChange={(e) => updatePlayer("Money", e.target.value)}
               />
-            </div>
+            </div> */}
 
             <div className="form-group col-md-6">
               <label>{l.enableBackButton}</label>
