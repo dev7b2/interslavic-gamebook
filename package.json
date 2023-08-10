@@ -4,6 +4,17 @@
   "homepage": "https://dev7b2.github.io/interslavic-gamebook",
   "description": "",
   "main": "index.js",
+  "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d built-web",
+    "tsc": "tsc",
+    "lint": "tslint -c ./tslint.json --project ./tsconfig.json --format stylish",
+    "test": "nyc --reporter=html --reporter=text mocha --require ts-node/register --bail src/test/**/*.ts",
+    "prettier-check": "prettier --list-different \"src/**/*.ts*(x)\"",
+    "build": "webpack --mode production --devtool source-map --progress",
+    "start": "webpack-dev-server --mode development --open --devtool cheap-module-source-map",
+    "pack-game-data": "ts-node src/packGameData/packGameData.ts"
+  },
   "dependencies": {
     "@types/bezier-js": "^4.1.0",
     "@types/classnames": "^2.2.6",
@@ -62,17 +73,6 @@
     "webpack-cli": "^3.3.4",
     "webpack-dev-server": "^3.11.3",
     "webpack-version-hash-plugin": "0.0.2"
-  },
-  "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d built-web",
-    "tsc": "tsc",
-    "lint": "tslint -c ./tslint.json --project ./tsconfig.json --format stylish",
-    "test": "nyc --reporter=html --reporter=text mocha --require ts-node/register --bail src/test/**/*.ts",
-    "prettier-check": "prettier --list-different \"src/**/*.ts*(x)\"",
-    "build": "webpack --mode production --devtool source-map --progress",
-    "start": "webpack-dev-server --mode development --open --devtool cheap-module-source-map",
-    "pack-game-data": "ts-node src/packGameData/packGameData.ts"
   },
   "repository": {
     "type": "git",
