@@ -168,7 +168,7 @@ const ENG: LangTexts = {
   toPlanet: "Arrived at the planet",
   toStar: "In the system",
   defaultCompensation: "Default compensation",
-  enableBackButton: "Back button",
+  enableBackButton: 'Klaviša "Nazad"',
   backButtonDisabled: "Disabled (normal mode)",
   backButtonEnabled: "Enabled (cheater mode)",
 
