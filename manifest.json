@@ -1,7 +1,7 @@
 {
-  "name": "Квесты из Космических Рейнджеров",
-  "short_name": "Квесты КР",
-  "description": "Сборник текстовых квестов из Космических Рейнджеров",
+  "name": "Medžuslovjanska kniga-igra",
+  "short_name": "Kniga-igra",
+  "description": "Medžuslovjanska kniga-igra",
   "start_url": "./#/",
   "display": "standalone",
   "theme_color": "#000000",
