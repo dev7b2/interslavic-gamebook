@@ -170,55 +170,7 @@ export class QuestList extends React.Component<
             <h5>{l.welcomeHeader}</h5>
           </div>
           <div className="row">
-            <div className="col-md-6 mb-3">
-              <ButtonDropdown
-                style={{
-                  display: "block",
-                }}
-                isOpen={this.state.dropdownOpen}
-                toggle={() =>
-                  this.setState({
-                    dropdownOpen: !this.state.dropdownOpen,
-                  })
-                }
-              >
-                <DropdownToggle color="info" caret block>
-                  {store.questsListTab === QUEST_SEARCH_ALL
-                    ? l.all
-                    : store.questsListTab === QUEST_SEARCH_OWN
-                    ? l.own
-                    : store.questsListTab}
-                </DropdownToggle>
-                <DropdownMenu>
-                  <DropdownItem onClick={() => (store.questsListTab = QUEST_SEARCH_ALL)}>
-                    {l.all}
-                  </DropdownItem>
-                  <DropdownItem divider />
-                  {this.origins.map((originName) => (
-                    <DropdownItem
-                      key={originName}
-                      onClick={() => (store.questsListTab = originName)}
-                    >
-                      {originName}
-                    </DropdownItem>
-                  ))}
-                  {/*
-                                    <DropdownItem divider />
-                                    
-                                    <DropdownItem
-                                        onClick={() =>
-                                            this.setState({
-                                                tab: OWN
-                                            })
-                                        }
-                                    >
-                                        {l.own}
-                                    </DropdownItem>
-                                    */}
-                </DropdownMenu>
-              </ButtonDropdown>
-            </div>
-            <div className="col-md-6 mb-3">
+            <div className="col-md-12 mb-3">
               <input
                 className="form-control"
                 value={store.questsListSearch}
@@ -233,40 +185,6 @@ export class QuestList extends React.Component<
 
           {this.questsToShow.length > 0 ? (
             <>
-              <div className="row mb-2 mt-0">
-                {this.proposedSlots.filter((x) => x).length > 0 && true ? (
-                  this.proposedSlots.map((slotGameName) =>
-                    slotGameName ? (
-                      <div className="col-md-4 col-12" key={slotGameName}>
-                        <button
-                          className="btn btn-block btn-primary py-2 mb-1"
-                          style={{
-                            whiteSpace: "normal",
-                          }}
-                          onClick={() => {
-                            location.href = `#/quests/${slotGameName}`;
-                          }}
-                        >
-                          <i className="fa fa-fw fa-star mr-1" />
-                          {slotGameName}
-                        </button>
-                      </div>
-                    ) : null,
-                  )
-                ) : (
-                  <div className="col-12 text-center text-success">{l.allQuestPassed}</div>
-                )}
-              </div>
-
-              <div className="mb-4">
-                <div className="text-center">
-                  {allQuestsForThisUserPassed.length}/{allQuestsForThisUser.length}
-                </div>
-                <Progress
-                  value={(allQuestsForThisUserPassed.length / allQuestsForThisUser.length) * 100}
-                />
-              </div>
-
               <div className="list-group">
                 {this.questsToShow.map((quest) => (
                   <a
