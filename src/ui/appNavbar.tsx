@@ -52,6 +52,12 @@ export class AppNavbar extends React.Component<{
                 </NavLink>
               </NavItem>
 
+              {/* <NavItem>
+                <NavLink active={tab0 === "champions"} href="#/champions">
+                  <i className="fa fa-fw fa-users" /> {l.topplayers}
+                </NavLink>
+              </NavItem> */}
+
               <NavItem>
                 <NavLink href="#/options" active={tab0 === "options"}>
                   <i className="fa fa-fw fa-cogs" /> {l.options}
@@ -76,7 +82,7 @@ export class AppNavbar extends React.Component<{
                                                     </NavLink>
                                                 </NavItem>
                                                     */}
-              {"serviceWorker" in navigator ? (
+              {/* {"serviceWorker" in navigator ? (
                 <NavItem>
                   <NavLink href="#/offlinemode" active={tab0 === "offlinemode"}>
                     {store.installingServiceWorkerState ||
@@ -98,9 +104,9 @@ export class AppNavbar extends React.Component<{
                     )}
                   </NavLink>
                 </NavItem>
-              ) : null}
+              ) : null} */}
 
-              {firebaseLoggedIn !== undefined ? (
+              {/* {firebaseLoggedIn !== undefined ? (
                 <NavItem>
                   <NavLink href="#/auth" active={tab0 === "auth"}>
                     {firebaseLoggedIn ? (
@@ -119,13 +125,13 @@ export class AppNavbar extends React.Component<{
                     )}
                   </NavLink>
                 </NavItem>
-              ) : null}
+              ) : null} */}
 
-              <NavItem>
+              {/* <NavItem>
                 <NavLink href="#/about" active={tab0 === "about"}>
                   <i className="fa fa-fw fa-info-circle" /> {l.about}
                 </NavLink>
-              </NavItem>
+              </NavItem> */}
             </Nav>
           </Collapse>
         </Navbar>
