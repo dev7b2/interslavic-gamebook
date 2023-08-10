@@ -272,14 +272,14 @@ export function getUIState(
   const texts =
     player.lang === "rus"
       ? {
-          iAgree: "Я берусь за это задание",
-          next: "Далее",
-          goBackToShip: "Вернуться на корабль",
+          iAgree: "Начети",
+          next: "Даље",
+          goBackToShip: "Докончити",
         }
       : {
-          iAgree: "I agree",
-          next: "Next",
-          goBackToShip: "Go back to ship",
+          iAgree: "Načeti",
+          next: "Dalje",
+          goBackToShip: "Dokončiti",
         };
 
   if (state.state === "starting") {
