@@ -35,9 +35,7 @@ export class AppNavbar extends React.Component<{
     return (
       <>
         <Navbar color="light" light expand="md">
-          <NavbarBrand href="#/">
-            {l.hi} {player.Player}
-          </NavbarBrand>
+          <NavbarBrand href="#/">{l.hi}</NavbarBrand>
           <NavbarToggler
             aria-label={l.menu}
             onClick={() => {

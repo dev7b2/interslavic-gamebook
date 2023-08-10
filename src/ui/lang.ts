@@ -2,7 +2,7 @@ import { Lang } from "../lib/qmplayer/player";
 import { assertNever } from "../assertNever";
 
 const RUS = {
-  hi: "Привет, ",
+  hi: "Поздрав, путник",
   menu: "Меню",
   quests: "Квесты",
   options: "Опции",
@@ -34,18 +34,18 @@ const RUS = {
   toPlanet: "Прилетел на планету",
   toStar: "В системе",
   defaultCompensation: "Награда за квест",
-  enableBackButton: "Кнопка назад",
+  enableBackButton: "Клавиша «Назад»",
   backButtonDisabled: "Выключена (нормальный режим)",
   backButtonEnabled: "Включена (читерский режим)",
 
-  lang: "Язык/Language",
-  rus: "Русский",
-  eng: "English",
+  lang: "Азбука/Azbuka",
+  rus: "Кирилица",
+  eng: "Latinica",
 
   save: "Сохранить",
   saving: "Сохраняю",
 
-  welcomeHeader: "Добро пожаловать в онлайн плеер квестов!",
+  welcomeHeader: "Добродошли в онлајнову книгу-игру!",
   all: "Все",
   own: "Загруженные",
   search: "Поиск",
@@ -136,7 +136,7 @@ const RUS = {
 export type LangTexts = typeof RUS;
 
 const ENG: LangTexts = {
-  hi: "Hi, ",
+  hi: "Pozdrav, putnik",
   menu: "Menu",
   quests: "Quests",
   options: "Option",
@@ -172,14 +172,14 @@ const ENG: LangTexts = {
   backButtonDisabled: "Disabled (normal mode)",
   backButtonEnabled: "Enabled (cheater mode)",
 
-  lang: "Язык/Language",
-  rus: "Русский",
-  eng: "English",
+  lang: "Азбука/Azbuka",
+  rus: "Кирилица",
+  eng: "Latinica",
 
   save: "Save",
   saving: "Saving",
 
-  welcomeHeader: "Welcome to the online quest player!",
+  welcomeHeader: "Dobrodošli v onlajnovu knigu-igru!",
   all: "All",
   own: "Uploaded",
   search: "Search",
