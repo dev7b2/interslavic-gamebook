@@ -11,5 +11,48 @@
 
 /* TODO: Remove this and do not use */
 .bootstrap-style .game-clr {
-  color: #28a745 !important;
+  color: #6c4908 !important;
+  font-weight: 700;
+}
+
+body {
+  background-color: #a4967c !important;
+  color: #3e3629;
+  font-family: -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.btn {
+  font-weight: bold;
+  color: #3e3629;
+}
+
+.btn:hover {
+  color: #3e3629db;
+}
+
+.btn-primary {
+    color: #3e3629;
+    background-color: #93b8c4;
+    border-color: #3e3629;
+    border-width: 3px;
+    font-weight: bold;
+}
+
+.btn-primary:focus, .btn-primary.focus {
+  outline: none;
+  box-shadow: 0 0 0 0.2rem #93b8c4;
+}
+
+.btn-primary:not(:disabled):not(.disabled):active,
+.btn-primary:not(:disabled):not(.disabled).active,
+.btn-primary:active,
+.btn-primary:hover {
+  /* background-color: #3e3629;
+  border-color: #aa781d;
+  color: #aa781d; */
+  color: #3e3629;
+  background-color: #96bcc8;
+  border-color: #3e3629;
+  border-width: 3px;
+  box-shadow: 0 0 0 0.2rem #96bcc8;
 }
