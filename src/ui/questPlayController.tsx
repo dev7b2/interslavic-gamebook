@@ -21,6 +21,7 @@ import { QuestPlay } from "./questPlay/questPlay";
 import { toJS } from "mobx";
 import { ErrorInfo } from "./common";
 import { Progress } from "reactstrap";
+import { toggleFullscreen } from "./questPlay/fullscreen";
 
 interface QuestPlayState {
   quest?: Quest;
@@ -183,6 +184,9 @@ export class QuestPlayController extends React.Component<
           );
         }}
         onExit={() => {
+          // exit from fullscreen mode
+          toggleFullscreen(false);
+
           location.hash = `/quests/${this.props.gameName}`;
         }}
         busySaving={!!this.state.thinkingSavingWin}
