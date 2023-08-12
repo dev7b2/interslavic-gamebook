@@ -69,7 +69,7 @@ export class QuestInfo extends React.Component<
     return (
       <DivFadeinCss className="container">
         <div className="text-center mb-3">
-          <h4>{game.gameName}</h4>
+          <h4>{game.gameTitle}</h4>
           <div>
             <small>{game.smallDescription}</small>
           </div>

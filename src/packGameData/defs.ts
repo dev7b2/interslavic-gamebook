@@ -8,6 +8,7 @@ export interface Game {
   taskText: string;
   smallDescription?: string;
   gameName: string;
+  gameTitle: string;
   questOrigin: Origin;
   // oldTgeBehaviour: boolean,
   hardness: number;
