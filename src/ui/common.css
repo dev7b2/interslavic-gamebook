@@ -1,3 +1,9 @@
+body {
+  background-color: #a4967c !important;
+  color: #3e3629;
+  font-family: -apple-system, Roboto, "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
 /* DivFadeinCss */
 .fade-enter {
   opacity: 0.01;
@@ -15,22 +21,18 @@
   font-weight: 700;
 }
 
-body {
-  background-color: #a4967c !important;
-  color: #3e3629;
-  font-family: -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-}
+/* ========== OVERRIDE BOOTSTRAP CONROLS ========== */
 
-.btn {
+.game-design .btn {
   font-weight: bold;
   color: #3e3629;
 }
 
-.btn:hover {
+.game-design .btn:hover {
   color: #3e3629db;
 }
 
-.btn-primary {
+.game-design .btn-primary {
     color: #3e3629;
     background-color: #93b8c4;
     border-color: #3e3629;
@@ -38,15 +40,16 @@ body {
     font-weight: bold;
 }
 
-.btn-primary:focus, .btn-primary.focus {
+.game-design .btn-primary:focus,
+.game-design .btn-primary.focus {
   outline: none;
   box-shadow: 0 0 0 0.2rem #93b8c4;
 }
 
-.btn-primary:not(:disabled):not(.disabled):active,
-.btn-primary:not(:disabled):not(.disabled).active,
-.btn-primary:active,
-.btn-primary:hover {
+.game-design .btn-primary:not(:disabled):not(.disabled):active,
+.game-design .btn-primary:not(:disabled):not(.disabled).active,
+.game-design .btn-primary:active,
+.game-design .btn-primary:hover {
   /* background-color: #3e3629;
   border-color: #aa781d;
   color: #aa781d; */
@@ -55,4 +58,14 @@ body {
   border-color: #3e3629;
   border-width: 3px;
   box-shadow: 0 0 0 0.2rem #96bcc8;
+}
+
+/* ========== (END) OVERRIDE BOOTSTRAP CONROLS ========== */
+
+.quest-play-frame {
+  border: 3px solid #3e3629;
+}
+
+.qm-editor {
+  background-color: #fff;
 }

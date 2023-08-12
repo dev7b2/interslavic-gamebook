@@ -535,6 +535,7 @@ export function EditorCore({
 
   return (
     <div
+      className="qm-editor"
       style={{
         width: "100%",
         height: "100vh",

@@ -7,10 +7,17 @@
 }
 
 .game-root {
-  color: #9eacac;
+  font-weight: bold;
+  color: #3e3629;
 }
 .game-root a {
-  color: #9eacac;
+  font-weight: 900;
+  color: #3e3629;
+}
+
+.game-root a:hover {
+  text-decoration: none;
+  color: #575040;
 }
 
 .game-root .game-inactive {
@@ -20,5 +27,5 @@
   cursor: default;
 }
 .game-root .game-clr {
-  color: #ffd863;
+  color: #825a10;
 }
