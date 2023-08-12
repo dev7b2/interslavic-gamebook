@@ -27,7 +27,7 @@ function getDefaultScrollBarWidth() {
   return widthNoScroll - widthWithScroll;
 }
 
-const MY_SCROLL_WIDTH = 15;
+const MY_SCROLL_WIDTH = 6;
 
 const WORKAROUND_GAP = 5;
 
