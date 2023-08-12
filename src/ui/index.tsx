@@ -231,41 +231,13 @@ class MainLoader extends React.Component<{}> {
 
     const { tab0, tab1, tab2 } = store.path;
 
-    if (tab0 === "auth") {
+    if (tab0 === "options") {
       return (
-        <AppNavbar store={store}>
-          <AuthTabContainer store={store} />
-        </AppNavbar>
-      );
-    } else if (tab0 === "options") {
-      return (
-        <AppNavbar store={store}>
-          <OptionsTabContainer store={store} />
-        </AppNavbar>
-      );
-    } else if (tab0 === "offlinemode") {
-      return (
-        <AppNavbar store={store}>
-          <OfflineModeTabContainer store={store} />
-        </AppNavbar>
-      );
-    } else if (tab0 === "about") {
-      return (
-        <AppNavbar store={store}>
-          <AboutTabContainer store={store} />
-        </AppNavbar>
-      );
-    } else if (tab0 === "champions") {
-      return (
-        <AppNavbar store={store}>
-          <ChampionsTabContainer store={store} />
-        </AppNavbar>
-      );
-    } else if (tab0 === "logs") {
-      return (
-        <AppNavbar store={store}>
-          <ChampionsTabContainerNew store={store} />
-        </AppNavbar>
+        <div className="game-design">
+          <AppNavbar store={store}>
+            <OptionsTabContainer store={store} />
+          </AppNavbar>
+        </div>
       );
     } else if (tab0 === "editor") {
       return (
@@ -284,27 +256,30 @@ class MainLoader extends React.Component<{}> {
       );
     } else if (tab0 === "quests") {
       if (!tab1) {
-        return <QuestList store={store} />;
+        return (
+          <div className="game-design">
+            <QuestList store={store} />
+          </div>
+        );
       } else {
         if (!tab2) {
           return (
-            <AppNavbar store={store}>
-              <QuestInfo key={tab1} store={store} gameName={tab1} />
-            </AppNavbar>
+            <div className="game-design">
+              <AppNavbar store={store}>
+                <QuestInfo key={tab1} store={store} gameName={tab1} />
+              </AppNavbar>
+            </div>
           );
         } else {
-          return <QuestPlayController key={tab1} store={store} gameName={tab1} />;
+          return (
+            <div className="game-design">
+              <QuestPlayController key={tab1} store={store} gameName={tab1} />
+            </div>
+          );
         }
       }
-    } else if (tab0 === "userquest") {
-      // TODO: Better to decodeURIComponent in the store.path method
-      const [userId, questName] = [decodeURIComponent(tab1), decodeURIComponent(tab2)];
-      if (userId && questName) {
-        return <QuestPlayUserQuestController store={store} userId={userId} questName={questName} />;
-      } else {
-        return <Redirect to="#/quests" />;
-      }
     }
+
     return (
       <div>
         <Redirect to="#/quests" />
