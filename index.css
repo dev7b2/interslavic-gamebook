@@ -12545,24 +12545,8 @@ select.customized-select::-ms-expand {
 }
 
 .rcs-inner-handle.rcs-inner-handle {
-  background-color: #353535;
-
-  border-radius: 5px;
-
-  /* https://www.magicpattern.design/tools/css-backgrounds */
-  background-color: #1e1e1e;
-  opacity: 1;
-  background-image: repeating-linear-gradient(
-      45deg,
-      #1a1a1a 25%,
-      transparent 25%,
-      transparent 75%,
-      #1a1a1a 75%,
-      #1a1a1a
-    ),
-    repeating-linear-gradient(45deg, #1a1a1a 25%, #1e1e1e 25%, #1e1e1e 75%, #1a1a1a 75%, #1a1a1a);
-  background-position: 0 0, 4px 4px;
-  background-size: 8px 8px;
+  background-color: #3e3629;
+  border-radius: 6px;
 }
 
 .gameplay-button {
@@ -12572,9 +12556,23 @@ select.customized-select::-ms-expand {
   height: 40px;
   border-radius: 10px 0px 10px 0;
   overflow: hidden;
-  border: 1px solid #ababab;
+  border: 3px solid #3e3629;
   background: none;
   position: relative;
+  background-color: #93b8c4;
+}
+
+.gameplay-button:active,
+.gameplay-button:focus,
+.gameplay-button:hover {
+  box-shadow: 0 0 0 0.2rem #96bcc8;
+  background-color: #96bcc8;
+  outline: none;
+}
+
+.gameplay-button:focus {
+  box-shadow: 0 0 0 0.2rem #93b8c4a6;
+  outline: none;
 }
 
 .gameplay-button-background {
@@ -12583,7 +12581,7 @@ select.customized-select::-ms-expand {
   top: 0;
   right: 0;
   bottom: 0;
-  background-color: #1e5a64;
+  background-color: transparent;
   opacity: 0.5;
 }
 .gameplay-button:hover .gameplay-button-background {
@@ -12593,24 +12591,23 @@ select.customized-select::-ms-expand {
   opacity: 0.5; /* Keep previous opacity */
 }
 
-.gameplay-button:hover .gameplay-button-content {
-  color: #dadada;
-}
-
 .gameplay-button-content {
   position: absolute;
   left: 0;
   top: 0;
   right: 0;
   bottom: 0;
-  color: #aaaaaa;
+  color: #3e3629;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+.gameplay-button:disabled {
+  border-color: #00000033;
+}
 .gameplay-button:disabled .gameplay-button-content {
-  color: #777777;
+  color: #00000033;
 }
 
 :root {
