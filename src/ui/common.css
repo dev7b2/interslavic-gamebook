@@ -136,3 +136,11 @@ select.customized-select::-ms-expand {
 }
 
 /* === (END) <select> styles === */
+
+.gameplay-buttons {
+  display: flex;
+  position: absolute;
+  bottom: 4px;
+  left: 50%;
+  transform: translate(-50%, 0);
+}

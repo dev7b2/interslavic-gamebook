@@ -492,14 +492,7 @@ export function QuestPlay({
                     }
                   </div>
                 </ScrollableContainer>
-                <div
-                  className="gameplay-buttons"
-                  style={{
-                    position: "absolute",
-                    right: 16,
-                    bottom: 4,
-                  }}
-                >
+                <div className="gameplay-buttons">
                   <GamePlayButton ariaLabel={l.restart} onClick={onRestartButtonClick}>
                     {restartButtonContent}
                   </GamePlayButton>
