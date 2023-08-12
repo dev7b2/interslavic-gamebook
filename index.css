@@ -12373,6 +12373,12 @@ a.text-dark:hover, a.text-dark:focus {
   clip: auto;
 }
 
+body {
+  background-color: #a4967c !important;
+  color: #3e3629;
+  font-family: -apple-system, Roboto, "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
 /* DivFadeinCss */
 .fade-enter {
   opacity: 0.01;
@@ -12386,9 +12392,58 @@ a.text-dark:hover, a.text-dark:focus {
 
 /* TODO: Remove this and do not use */
 .bootstrap-style .game-clr {
-  color: #28a745 !important;
+  color: #6c4908 !important;
+  font-weight: 700;
 }
 
+/* ========== OVERRIDE BOOTSTRAP CONROLS ========== */
+
+.game-design .btn {
+  font-weight: bold;
+  color: #3e3629;
+}
+
+.game-design .btn:hover {
+  color: #3e3629db;
+}
+
+.game-design .btn-primary {
+    color: #3e3629;
+    background-color: #93b8c4;
+    border-color: #3e3629;
+    border-width: 3px;
+    font-weight: bold;
+}
+
+.game-design .btn-primary:focus,
+.game-design .btn-primary.focus {
+  outline: none;
+  box-shadow: 0 0 0 0.2rem #93b8c4;
+}
+
+.game-design .btn-primary:not(:disabled):not(.disabled):active,
+.game-design .btn-primary:not(:disabled):not(.disabled).active,
+.game-design .btn-primary:active,
+.game-design .btn-primary:hover {
+  /* background-color: #3e3629;
+  border-color: #aa781d;
+  color: #aa781d; */
+  color: #3e3629;
+  background-color: #96bcc8;
+  border-color: #3e3629;
+  border-width: 3px;
+  box-shadow: 0 0 0 0.2rem #96bcc8;
+}
+
+/* ========== (END) OVERRIDE BOOTSTRAP CONROLS ========== */
+
+.quest-play-frame {
+  border: 3px solid #3e3629;
+}
+
+.qm-editor {
+  background-color: #fff;
+}
 .game-text {
   white-space: pre-wrap;
 }
@@ -12398,10 +12453,17 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 .game-root {
-  color: #9eacac;
+  font-weight: bold;
+  color: #3e3629;
 }
 .game-root a {
-  color: #9eacac;
+  font-weight: 900;
+  color: #3e3629;
+}
+
+.game-root a:hover {
+  text-decoration: none;
+  color: #575040;
 }
 
 .game-root .game-inactive {
@@ -12411,7 +12473,7 @@ a.text-dark:hover, a.text-dark:focus {
   cursor: default;
 }
 .game-root .game-clr {
-  color: #ffd863;
+  color: #825a10;
 }
 
 .rcs-inner-handle.rcs-inner-handle {
@@ -12481,13 +12543,6 @@ a.text-dark:hover, a.text-dark:focus {
 
 .gameplay-button:disabled .gameplay-button-content {
   color: #777777;
-}
-
-@keyframes champions-blinker {  
-    50% { opacity: 0.3; }
-}  
-.champions-blink {
-    animation: champions-blinker 0.5s linear infinite;
 }
 
 :root {
