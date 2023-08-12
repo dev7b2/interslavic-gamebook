@@ -26,7 +26,7 @@ const QuestPlayFrameBackground: React.FC<FrameBorderProps> = ({
       top: frameBorderY,
       right: frameBorderX,
       bottom: frameBorderY,
-      backgroundColor: "transparent",
+      backgroundColor: "#a4967c",
     }}
   >
     {children}
