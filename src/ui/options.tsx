@@ -57,7 +57,7 @@ export class OptionsTabContainer extends React.Component<
             <div className="form-group col-md-6">
               <label>{l.lang}</label>
               <select
-                className="form-control"
+                className="customized-select"
                 value={player.lang}
                 onChange={(e) => updatePlayer("lang", e.target.value as Lang)}
               >
@@ -124,7 +124,7 @@ export class OptionsTabContainer extends React.Component<
             <div className="form-group col-md-6">
               <label>{l.enableBackButton}</label>
               <select
-                className="form-control"
+                className="customized-select"
                 value={player.allowBackButton ? "1" : "0"}
                 onChange={(e) => updatePlayer("allowBackButton", e.target.value === "1")}
               >
