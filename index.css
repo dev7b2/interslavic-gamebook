@@ -12512,6 +12512,14 @@ select.customized-select::-ms-expand {
 
 /* === (END) <select> styles === */
 
+.gameplay-buttons {
+  display: flex;
+  position: absolute;
+  bottom: 4px;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
 .game-text {
   white-space: pre-wrap;
 }
@@ -12552,9 +12560,9 @@ select.customized-select::-ms-expand {
 .gameplay-button {
   margin-left: 5px;
   margin-right: 5px;
-  width: 60px;
-  height: 40px;
-  border-radius: 10px 0px 10px 0;
+  width: 45px;
+  height: 35px;
+  border-radius: 10px;
   overflow: hidden;
   border: 3px solid #3e3629;
   background: none;
