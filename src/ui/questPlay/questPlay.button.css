@@ -19,6 +19,11 @@
   outline: none;
 }
 
+.gameplay-button:focus {
+  box-shadow: 0 0 0 0.2rem #93b8c4a6;
+  outline: none;
+}
+
 .gameplay-button-background {
   position: absolute;
   left: 0;
@@ -48,8 +53,8 @@
 }
 
 .gameplay-button:disabled {
-  border-color: #979696;
+  border-color: #00000033;
 }
 .gameplay-button:disabled .gameplay-button-content {
-  color: #979696;
+  color: #00000033;
 }
