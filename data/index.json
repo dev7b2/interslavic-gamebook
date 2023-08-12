@@ -3,8 +3,9 @@
     {
       "filename": "qm/baba-yaga.qmm.gz",
       "taskText": "Баба Яга. \r\n\r\n По мотивам русской народной сказки.",
-      "smallDescription": "Сложность: 10, из КР 1",
+      "smallDescription": "Время прохождения: ~7 минут",
       "gameName": "Baba",
+      "gameTitle": "Гуси-лебеди",
       "hardness": 10,
       "questOrigin": "КР 1",
       "lang": "rus"
@@ -12,8 +13,9 @@
     {
       "filename": "qm/baba-yaga.qmm.gz",
       "taskText": "Baba yaga \r\n\r\n LAT",
-      "smallDescription": "Сложность: 10, из КР 1",
+      "smallDescription": "Сложность: 10",
       "gameName": "Baba_lat",
+      "gameTitle": "Gusi-lebedi",
       "hardness": 10,
       "questOrigin": "КР 1",
       "lang": "eng"
@@ -21,8 +23,9 @@
     {
       "filename": "qm/quest2.qmm.gz",
       "taskText": "МС квест, система <ToStar>, при загадочных обстоятельствах пропали два наших исследователя, изучавших местную фауну. Неожиданно связь с ними оборвалась, и мы можем только теряться в догадках, что с ними произошло. <Ranger>, мы предлагаем вам отправиться в место их последней стоянки и выяснить, живы ли они. Если нет, то ваша задача - найти диск, на котором ученые фиксировали свои наблюдения. Если вы привезете его нам к <Date>, ваш гонорар составит <Money> cr, и как добросовестный исследователь, вы получите признание научной общественности нашей планеты.",
-      "smallDescription": "Сложность: 10, из КР 1",
+      "smallDescription": "Сложность: 10",
       "gameName": "MS",
+      "gameTitle": "Тестовый квест",
       "hardness": 10,
       "questOrigin": "КР 1",
       "lang": "rus"
