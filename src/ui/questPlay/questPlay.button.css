@@ -5,9 +5,18 @@
   height: 40px;
   border-radius: 10px 0px 10px 0;
   overflow: hidden;
-  border: 1px solid #ababab;
+  border: 3px solid #3e3629;
   background: none;
   position: relative;
+  background-color: #93b8c4;
+}
+
+.gameplay-button:active,
+.gameplay-button:focus,
+.gameplay-button:hover {
+  box-shadow: 0 0 0 0.2rem #96bcc8;
+  background-color: #96bcc8;
+  outline: none;
 }
 
 .gameplay-button-background {
@@ -16,7 +25,7 @@
   top: 0;
   right: 0;
   bottom: 0;
-  background-color: #1e5a64;
+  background-color: transparent;
   opacity: 0.5;
 }
 .gameplay-button:hover .gameplay-button-background {
@@ -26,22 +35,21 @@
   opacity: 0.5; /* Keep previous opacity */
 }
 
-.gameplay-button:hover .gameplay-button-content {
-  color: #dadada;
-}
-
 .gameplay-button-content {
   position: absolute;
   left: 0;
   top: 0;
   right: 0;
   bottom: 0;
-  color: #aaaaaa;
+  color: #3e3629;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+.gameplay-button:disabled {
+  border-color: #979696;
+}
 .gameplay-button:disabled .gameplay-button-content {
-  color: #777777;
+  color: #979696;
 }
