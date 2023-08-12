@@ -55,7 +55,7 @@ export class OptionsTabContainer extends React.Component<
             </div> */}
 
             <div className="form-group col-md-6">
-              <label>{l.lang}</label>
+              <label className="customized-label">{l.lang}</label>
               <select
                 className="customized-select"
                 value={player.lang}
@@ -122,7 +122,7 @@ export class OptionsTabContainer extends React.Component<
             </div> */}
 
             <div className="form-group col-md-6">
-              <label>{l.enableBackButton}</label>
+              <label className="customized-label">{l.enableBackButton}</label>
               <select
                 className="customized-select"
                 value={player.allowBackButton ? "1" : "0"}

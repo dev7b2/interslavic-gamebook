@@ -169,19 +169,6 @@ export class QuestList extends React.Component<
           <div className="text-center mb-3">
             <h5>{l.welcomeHeader}</h5>
           </div>
-          <div className="row">
-            <div className="col-md-12 mb-3">
-              <input
-                className="form-control"
-                value={store.questsListSearch}
-                onChange={(e) => (store.questsListSearch = e.target.value)}
-                onKeyUp={(e) =>
-                  e.which === 27 /* ESC */ ? (store.questsListSearch = "") : undefined
-                }
-                placeholder={l.search}
-              />
-            </div>
-          </div>
 
           {this.questsToShow.length > 0 ? (
             <>

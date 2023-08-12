@@ -70,6 +70,29 @@ body {
   background-color: #fff;
 }
 
+.customized-label {
+  font-weight: bold;
+}
+
+/* .search-input {
+  color: #3e3629;
+  background-color: #a4967c;
+  font-weight: bold;
+  border: 3px solid #3e3629;
+}
+
+.search-input:focus {
+  color: #3e3629;
+  background-color: #a4967c;
+  font-weight: bold;
+  border: 3px solid #3e3629;
+  box-shadow: none;
+}
+
+.search-input::placeholder {
+  color: #3e3629;
+} */
+
 /* === <select> styles === */
 /* === @link https://codepen.io/raubaca/pen/bGWmZje === */
 
