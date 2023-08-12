@@ -152,7 +152,8 @@ export class QuestInfo extends React.Component<
                 toggleFullscreen(true);
               }}
             >
-              <i className="fa fa-rocket" /> {l.startFromTheStart}
+              <i className="fa fa-rocket" />{" "}
+              <span className="button-text">{l.startFromTheStart}</span>
             </button>
           </div>
           <div className="col-md-4">
@@ -170,12 +171,14 @@ export class QuestInfo extends React.Component<
                 <i className="fa fa-spin fa-spinner" />
               ) : this.state.lastSavedGameState ? (
                 <>
-                  <i className="fa fa-save" /> {l.startFromLastSave}
+                  <i className="fa fa-save" />{" "}
+                  <span className="button-text">{l.startFromLastSave}</span>
                 </>
               ) : (
                 <>
                   {" "}
-                  <i className="fa fa-circle-o" /> {l.noLastSave}
+                  <i className="fa fa-circle-o" />{" "}
+                  <span className="button-text">{l.noLastSave}</span>
                 </>
               )}
             </button>
@@ -188,7 +191,7 @@ export class QuestInfo extends React.Component<
                 location.hash = `/quests`;
               }}
             >
-              <i className="fa fa-reply" /> {l.backToList}
+              <i className="fa fa-reply" /> <span className="button-text">{l.backToList}</span>
             </button>
           </div>
         </div>

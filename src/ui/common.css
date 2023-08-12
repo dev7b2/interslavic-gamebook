@@ -74,6 +74,10 @@ body {
   font-weight: bold;
 }
 
+.button-text {
+  margin-left: 6px;
+}
+
 /* .search-input {
   color: #3e3629;
   background-color: #a4967c;

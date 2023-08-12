@@ -156,7 +156,7 @@ export class OptionsTabContainer extends React.Component<
               })().catch((e) => location.reload());
             }}
           >
-            <i className="fa fa-save" /> {l.save}
+            <i className="fa fa-save" /> <span className="button-text">{l.save}</span>
           </button>
         </div>
       </DivFadeinCss>
