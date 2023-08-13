@@ -45,7 +45,7 @@ const RUS = {
   save: "Записати",
   saving: "Сохраняю",
 
-  welcomeHeader: "Добродошли в онлајнову книгу-игру!",
+  welcomeHeader: "ЧАРОВНА КНИГА (онлајнова игра)",
   all: "Все",
   own: "Загруженные",
   search: "Исканје квестов",
@@ -179,7 +179,7 @@ const ENG: LangTexts = {
   save: "Zapisati",
   saving: "Saving",
 
-  welcomeHeader: "Dobrodošli v onlajnovu knigu-igru!",
+  welcomeHeader: "ČAROVNA KNIGA (onlajnova igra)",
   all: "All",
   own: "Uploaded",
   search: "Iskanje kvestov",
