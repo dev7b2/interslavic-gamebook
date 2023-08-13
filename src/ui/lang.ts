@@ -56,7 +56,7 @@ const RUS = {
   passed: "Пройден",
   startFromTheStart: "Начать сначала",
   startFromLastSave: "Загрузить сохранение",
-  noLastSave: "Нет сохранения",
+  noLastSave: "Немаjе схрањенја",
   loading: "Загрузка",
   loadingIndex: "Загрузка индекса",
   loadingLocalDatabase: "Загрузка локальной базы данных",
@@ -64,7 +64,7 @@ const RUS = {
 
   loadingQuest: "Загрузка квеста",
 
-  restart: "Начать сначала",
+  restart: "Рестарт",
   stepBack: "Шаг назад",
   reallyRestart: "Начать сначала?",
   toggleMusic: "Музыка",
@@ -190,7 +190,7 @@ const ENG: LangTexts = {
   passed: "Complete",
   startFromTheStart: "Start over",
   startFromLastSave: "Start saving",
-  noLastSave: "No saving",
+  noLastSave: "Nemaje shranjenja",
   loading: "Loading",
   loadingIndex: "Loading index",
   loadingLocalDatabase: "Loading local database",
