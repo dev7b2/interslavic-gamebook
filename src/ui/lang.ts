@@ -54,7 +54,7 @@ const RUS = {
   allQuestPassed: "Все квесты пройдены!",
 
   passed: "Пройден",
-  startFromTheStart: "Начать сначала",
+  startFromTheStart: "Начети изнова",
   startFromLastSave: "Загрузить сохранение",
   noLastSave: "Немаjе схрањенја",
   loading: "Загрузка",
@@ -69,9 +69,9 @@ const RUS = {
   reallyRestart: "Начать сначала?",
   toggleMusic: "Музика",
   toggleFullscreen: "На вес екран",
-  exit: "Выход",
+  exit: "Изход",
   yes: "Да",
-  no: "Нет",
+  no: "Не",
 
   back: "Назад",
   backToList: "К списку квестов",
@@ -188,7 +188,7 @@ const ENG: LangTexts = {
   allQuestPassed: " All quests are completed!",
 
   passed: "Complete",
-  startFromTheStart: "Start over",
+  startFromTheStart: "Načeti iznova",
   startFromLastSave: "Start saving",
   noLastSave: "Nemaje shranjenja",
   loading: "Loading",
@@ -203,12 +203,12 @@ const ENG: LangTexts = {
   reallyRestart: "Really restart?",
   toggleMusic: "Muzika",
   toggleFullscreen: "Na ves ekran",
-  exit: "Exit",
-  yes: "Yes",
-  no: "No",
+  exit: "Izhod",
+  yes: "Da",
+  no: "Ne",
 
   back: "Back",
-  backToList: "Back to quests",
+  backToList: "K spisku kvestov",
 
   installEngineNotStarted: "Waiting for offline mode registration",
   installingEngine: "Offline application mode is being installed",
