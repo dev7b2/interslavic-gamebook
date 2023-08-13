@@ -1,10 +1,10 @@
 {
   "quests": [
     {
-      "filename": "qm/baba-yaga.qmm.gz",
-      "taskText": "Баба Яга. \r\n\r\n По мотивам русской народной сказки.",
+      "filename": "qm/gusi-lebedi.qmm.gz",
+      "taskText": "Квест по мотивам русской народной сказки.",
       "smallDescription": "Время прохождения: ~7 минут",
-      "gameName": "Baba",
+      "gameName": "gusi-lebedi",
       "gameTitle": "Гуси-лебеди",
       "hardness": 10,
       "questOrigin": "КР 1",
