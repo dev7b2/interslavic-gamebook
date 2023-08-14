@@ -105,9 +105,6 @@ class MainLoader extends React.Component<{}> {
         return assertNever(this.loadingStage);
       }
     }
-    if (store.reloadingPage) {
-      return <Loader text={store.l.reloading} />;
-    }
 
     const { tab0, tab1, tab2 } = store.path;
 

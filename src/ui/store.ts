@@ -144,8 +144,6 @@ export class Store {
 
   @observable serviceWorkerController: ServiceWorkerState | null = null;
 
-  @observable reloadingPage: boolean = false;
-
   @observable storageIsPersisted: boolean | undefined = undefined;
 
   @observable installingServiceWorkerState: ServiceWorkerState | null = null;
