@@ -1,22 +1,22 @@
 {
-  "name": "Medžuslovjanska kniga-igra",
-  "short_name": "Kniga-igra",
-  "description": "Medžuslovjanska kniga-igra",
+  "name": "Čarovna kniga",
+  "short_name": "Čarovna kniga",
+  "description": "Čarovna kniga. Medžuslovjanska kniga-igra",
   "start_url": "./#/",
   "display": "standalone",
   "theme_color": "#ffffff",
   "background_color": "#ffffff",
   "orientation": "portrait",
   "icons": [
-        {
-            "src": "/android-chrome-192x192.png",
-            "sizes": "192x192",
-            "type": "image/png"
-        },
-        {
-            "src": "/android-chrome-512x512.png",
-            "sizes": "512x512",
-            "type": "image/png"
-        }
+    {
+      "src": "android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
   ]
 }
