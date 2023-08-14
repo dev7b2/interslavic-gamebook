@@ -287,24 +287,6 @@ export async function getDb(app: firebase.app.App) {
       debug(`Now firebase have ${firebaseDatabaseOnlineConnections} connections`);
     }
   }
-  try {
-    app.auth().onAuthStateChanged(function (user) {
-      firebaseUser = user;
-      debug(`on auth changed = ${firebaseUser ? firebaseUser.uid : "<null>"}`);
-    });
-
-    app
-      .database()
-      .ref(".info/connected")
-      .on("value", (snap) => {
-        const firebaseOnline = snap && snap.val();
-        debug(`Firebase online=${firebaseOnline}`);
-      });
-
-    firebaseGoOffline();
-  } catch (e) {
-    console.error(`Error with firebase: `, e);
-  }
 
   /* No actions from this point, only exported functions */
 

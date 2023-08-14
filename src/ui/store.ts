@@ -62,7 +62,7 @@ export function splitByBuckets<T>(array: T[], amountOfBuckets: number) {
 const DOWNLOAD_AUDIBLE_MEDIA_KEYS = ["sound", "track"] as const;
 
 export class Store {
-  constructor(public index: Index, public app: firebase.app.App, public db: DB, player: Player) {
+  constructor(public index: Index, public db: DB, player: Player) {
     window.addEventListener("hashchange", this.setPath);
     this.setPath();
     this.player = player;
@@ -121,8 +121,10 @@ export class Store {
     };
   }
 
+  // TODO - dop it
   @observable firebaseLoggedIn: firebase.User | null | undefined = undefined;
 
+  // TODO - dop it
   @observable firebaseSyncing: boolean = false;
 
   @computed

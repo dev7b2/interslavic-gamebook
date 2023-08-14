@@ -37,23 +37,21 @@ import { OfflineModeTabContainer } from "./offlineMode";
 import { OptionsTabContainer } from "./options";
 import { QuestList } from "./questList";
 import { AppNavbar } from "./appNavbar";
-import { AuthTabContainer } from "./auth";
 import { QuestInfo } from "./questInfo";
 import { Store } from "./store";
 import { QuestPlayController } from "./questPlayController";
 import { AboutTabContainer } from "./about";
 import { ChampionsTabContainer } from "./champions";
-import { firebaseConfig } from "./firebaseConfig";
 import { ChampionsTabContainerNew } from "./champions.new";
 import { EditorContainer } from "./editor";
 import { QuestPlayUserQuestController } from "./questPlayUserQuestController";
 console.info(`Starting the app (buildAt=${new Date(__VERSION__).toISOString()})`);
 
-const app = firebase.initializeApp(firebaseConfig);
-// const app = firebase.initializeApp({} as typeof config);
+// TODO - drop it
+const app = firebase.initializeApp({} as any);
 
 function debug(...args: any) {
-  //console.info(...args)
+  // console.info(...args);
 }
 
 @observer
@@ -75,6 +73,7 @@ class MainLoader extends React.Component<{}> {
 
       const db = await getDb(app);
       let player = await db.getConfigLocal("player");
+
       if (!player) {
         debug(`Welcome, a new user!`);
         player =
@@ -87,7 +86,7 @@ class MainLoader extends React.Component<{}> {
       }
 
       const lastLocation = await db.getConfigLocal("lastLocation");
-      const store = new Store(index, app, db, player);
+      const store = new Store(index, db, player);
       (window as any).store = store;
       autorun(() => {
         db.setConfigLocal("lastLocation", store.hash).catch((e) => console.warn(e));
@@ -105,16 +104,8 @@ class MainLoader extends React.Component<{}> {
       //    location.hash = `/quests/${lastPlayedGame}`;
       //}
       await store.loadWinProofsFromLocal();
-      try {
-        app.auth().onAuthStateChanged((user) => {
-          store.firebaseLoggedIn = user;
-          if (user) {
-            store.syncWithFirebase().catch((e) => console.warn(e));
-          }
-        });
-      } catch (e) {
-        console.warn("Error with firebase", e);
-      }
+
+      // TODO - drop sw?
       if ("serviceWorker" in navigator && location.hostname !== "localhost") {
         (async () => {
           const registrationOld = await navigator.serviceWorker.getRegistration();
