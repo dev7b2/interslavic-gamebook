@@ -1,11 +1,10 @@
-import { observable, computed, action } from "mobx";
+import { observable, computed } from "mobx";
 import { Index } from "../packGameData/defs";
 import { DB } from "./db/db";
 import { GameWonProofs } from "./db/defs";
 import { Player } from "../lib/qmplayer/player";
 import { getLang } from "./lang";
 import { CACHE_MUSIC_NAME_MP3, DATA_DIR, CACHE_IMAGES_NAME } from "./consts";
-import firebase from "firebase";
 
 type CacheInfo = "no" | "yes" | undefined;
 interface CacheInstallInfo {
@@ -120,12 +119,6 @@ export class Store {
       tab2: arr[2],
     };
   }
-
-  // TODO - dop it
-  @observable firebaseLoggedIn: firebase.User | null | undefined = undefined;
-
-  // TODO - dop it
-  @observable firebaseSyncing: boolean = false;
 
   @computed
   get l() {
