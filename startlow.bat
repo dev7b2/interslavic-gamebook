@@ -1,2 +1,0 @@
-start /belownormal npm start
-
