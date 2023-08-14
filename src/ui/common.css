@@ -32,6 +32,10 @@ body {
   color: #3e3629db;
 }
 
+.game-design .btn:focus {
+  box-shadow: 0 0 0 0.2rem #3e362936 !important;
+}
+
 .game-design .btn-primary {
     color: #3e3629;
     background-color: #93b8c4;
@@ -52,7 +56,11 @@ body {
 
 .game-design .btn-primary:focus,
 .game-design .btn-primary.focus {
-  box-shadow: 0 0 0 0.2rem #93b8c4a6;
+  color: #3e3629 !important;
+  background-color: #96bcc8 !important;
+  border-color: #3e3629 !important;
+  border-width: 3px !important;
+  box-shadow: 0 0 0 0.2rem #93b8c4a6 !important;
   outline: none;
 }
 
