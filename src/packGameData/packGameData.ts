@@ -373,6 +373,7 @@ for (const origin of fs.readdirSync(dataSrcPath + "/qm")) {
           ? `Сложность: ${quest.hardness}, из ${origin}`
           : `Hardness: ${quest.hardness}, from ${origin}`,
       gameName,
+      gameTitle: gameName,
       hardness: quest.hardness,
       questOrigin: origin,
       lang,
