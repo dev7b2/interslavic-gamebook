@@ -145,25 +145,6 @@ export class Store {
     this.wonProofs = m;
   }
 
-  async syncWithFirebase() {
-    if (this.firebaseSyncing) {
-      // TODO: retry sync when first finished
-      return;
-    }
-    this.firebaseSyncing = true;
-    await this.db.syncWithFirebase();
-
-    // console.info: renew all cached values
-    const player = await this.db.getConfigLocal("player");
-    if (player) {
-      this.player = player;
-    }
-
-    await this.loadWinProofsFromLocal();
-
-    this.firebaseSyncing = false;
-  }
-
   lastQuestListScroll: number = 0;
 
   @observable serviceWorkerRegistered: boolean = false;

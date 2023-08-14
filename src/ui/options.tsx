@@ -144,7 +144,6 @@ export class OptionsTabContainer extends React.Component<
               (async () => {
                 const db = this.props.store.db;
                 await db.setConfigBoth("player", player);
-                await db.setOwnHighscoresName(player.Ranger);
                 const savedPlayer = await db.getConfigLocal("player");
                 if (!savedPlayer) {
                   throw new Error("Where is the player?");

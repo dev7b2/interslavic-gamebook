@@ -45,8 +45,6 @@ import { writeQmm } from "../../../lib/qmwriter";
 import { HelpOverlay } from "./overlays/helpOverlay";
 import { downloadQuest } from "./download";
 import { QuestName } from "./namechange";
-import { CloudQuestsProps } from "../defs";
-import { CloudQuestsOverlay } from "./overlays/cloudQuests";
 
 // tslint:disable-next-line:no-useless-cast
 export const EDITOR_MOUSE_MODES = ["select", "move", "newLocation", "newJump", "remove"] as const;
@@ -77,15 +75,7 @@ type EditorOverlay =
       readonly kind: "cloudquest";
     };
 
-export function EditorCore({
-  questsToLoad,
-  onExit,
-  cloudQuestProps,
-}: {
-  questsToLoad: Game[];
-  onExit: () => void;
-  cloudQuestProps: CloudQuestsProps;
-}) {
+export function EditorCore({ questsToLoad, onExit }: { questsToLoad: Game[]; onExit: () => void }) {
   const { quest, setQuest: saveQuestToIdb, undo, redo } = useIdb();
 
   // (window as any).quest = quest;
@@ -590,11 +580,7 @@ export function EditorCore({
           className={classNames("mr-3", "btn", "btn-light")}
           aria-label="Загрузка и выгрузка в облако"
           onClick={() => {
-            if (cloudQuestProps.getMyUserId()) {
-              setOverlayMode({ kind: "cloudquest" });
-            } else {
-              toast("Чтобы использовать облако нужно зайти в Firebase!");
-            }
+            toast("Чтобы использовать облако нужно зайти в Firebase!");
           }}
         >
           <i className="fa fa-cloud fa-fw" title="Загрузка и выгрузка в облако" />
@@ -853,16 +839,7 @@ export function EditorCore({
           ) : overlayMode.kind === "help" ? (
             <HelpOverlay onClose={() => setOverlayMode(undefined)} />
           ) : overlayMode.kind === "cloudquest" ? (
-            <CloudQuestsOverlay
-              quest={quest}
-              onClose={(newQuest) => {
-                setOverlayMode(undefined);
-                if (newQuest) {
-                  onChange(newQuest);
-                }
-              }}
-              {...cloudQuestProps}
-            />
+            <div>Cloud quest</div>
           ) : (
             assertNever(overlayMode)
           )

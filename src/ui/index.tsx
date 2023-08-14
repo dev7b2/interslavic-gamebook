@@ -7,9 +7,6 @@ import * as ReactDOM from "react-dom";
 import "bootstrap/dist/css/bootstrap.css";
 import "font-awesome/css/font-awesome.css";
 
-import firebase from "firebase/app";
-import "firebase/database";
-
 import { Index, Game } from "../packGameData/defs";
 
 import { getDb, DB } from "./db/db";
@@ -41,14 +38,9 @@ import { QuestInfo } from "./questInfo";
 import { Store } from "./store";
 import { QuestPlayController } from "./questPlayController";
 import { AboutTabContainer } from "./about";
-import { ChampionsTabContainer } from "./champions";
-import { ChampionsTabContainerNew } from "./champions.new";
 import { EditorContainer } from "./editor";
-import { QuestPlayUserQuestController } from "./questPlayUserQuestController";
-console.info(`Starting the app (buildAt=${new Date(__VERSION__).toISOString()})`);
 
-// TODO - drop it
-const app = firebase.initializeApp({} as any);
+console.info(`Starting the app (buildAt=${new Date(__VERSION__).toISOString()})`);
 
 function debug(...args: any) {
   // console.info(...args);
@@ -71,7 +63,7 @@ class MainLoader extends React.Component<{}> {
 
       this.loadingStage = "db";
 
-      const db = await getDb(app);
+      const db = await getDb();
       let player = await db.getConfigLocal("player");
 
       if (!player) {
@@ -236,12 +228,6 @@ class MainLoader extends React.Component<{}> {
           questsToLoad={toJS(store.index.quests)}
           onExit={() => {
             location.href = `#/`;
-          }}
-          cloudQuestProps={{
-            getAllMyCustomQuests: store.db.getAllMyCustomQuests,
-            loadCustomQuest: store.db.loadCustomQuest,
-            saveCustomQuest: store.db.saveCustomQuest,
-            getMyUserId: store.db.getMyUserId,
           }}
         />
       );
