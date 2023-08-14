@@ -12415,24 +12415,20 @@ body {
     font-weight: bold;
 }
 
-.game-design .btn-primary:focus,
-.game-design .btn-primary.focus {
-  outline: none;
-  box-shadow: 0 0 0 0.2rem #93b8c4;
-}
-
-.game-design .btn-primary:not(:disabled):not(.disabled):active,
-.game-design .btn-primary:not(:disabled):not(.disabled).active,
+.game-design .btn-primary:active,
 .game-design .btn-primary:active,
 .game-design .btn-primary:hover {
-  /* background-color: #3e3629;
-  border-color: #aa781d;
-  color: #aa781d; */
   color: #3e3629;
   background-color: #96bcc8;
   border-color: #3e3629;
   border-width: 3px;
   box-shadow: 0 0 0 0.2rem #96bcc8;
+}
+
+.game-design .btn-primary:focus,
+.game-design .btn-primary.focus {
+  box-shadow: 0 0 0 0.2rem #93b8c4a6;
+  outline: none;
 }
 
 /* ========== (END) OVERRIDE BOOTSTRAP CONROLS ========== */
