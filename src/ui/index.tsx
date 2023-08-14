@@ -7,37 +7,21 @@ import * as ReactDOM from "react-dom";
 import "bootstrap/dist/css/bootstrap.css";
 import "font-awesome/css/font-awesome.css";
 
-import { Index, Game } from "../packGameData/defs";
-
-import { getDb, DB } from "./db/db";
-import { DEFAULT_RUS_PLAYER, Player, DEFAULT_ENG_PLAYER } from "../lib/qmplayer/player";
-import { initGame } from "../lib/qmplayer";
-import { getUIState, performJump } from "../lib/qmplayer/funcs";
-import { Loader, DivFadeinCss, Redirect, ErrorInfo } from "./common";
+import { getDb } from "./db/db";
+import { DEFAULT_RUS_PLAYER, DEFAULT_ENG_PLAYER } from "../lib/qmplayer/player";
+import { Loader, Redirect, ErrorInfo } from "./common";
 import { observer } from "mobx-react";
 import { autorun, observable, runInAction, toJS } from "mobx";
-import {
-  Navbar,
-  NavbarBrand,
-  NavbarToggler,
-  Collapse,
-  Nav,
-  NavItem,
-  NavLink,
-  Container,
-} from "reactstrap";
 import { INDEX_JSON } from "./consts";
-import { getLang, browserDefaultLang, LangTexts } from "./lang";
+import { getLang, browserDefaultLang } from "./lang";
 import { assertNever } from "../assertNever";
 
-import { OfflineModeTabContainer } from "./offlineMode";
 import { OptionsTabContainer } from "./options";
 import { QuestList } from "./questList";
 import { AppNavbar } from "./appNavbar";
 import { QuestInfo } from "./questInfo";
 import { Store } from "./store";
 import { QuestPlayController } from "./questPlayController";
-import { AboutTabContainer } from "./about";
 import { EditorContainer } from "./editor";
 
 console.info(`Starting the app (buildAt=${new Date(__VERSION__).toISOString()})`);
