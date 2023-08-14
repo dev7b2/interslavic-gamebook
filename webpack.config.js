@@ -3,8 +3,6 @@ const webpack = require("webpack");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
-const ServiceWorkerWebpackPlugin = require("serviceworker-webpack-plugin");
-// const WebpackVersionHashPlugin = require("webpack-version-hash-plugin");
 const ForkTsCheckerWebpackPlugin = require("fork-ts-checker-webpack-plugin");
 
 const devServer /*: webpackDevServer.Configuration */ = {
@@ -34,7 +32,6 @@ const config = (env, argv) => {
     entry: {
       index: "./src/ui/index.tsx",
       worker: "./src/ui/worker/worker.ts",
-      serviceWorker: "./src/ui/serviceWorker.ts",
     },
 
     output: {
@@ -66,10 +63,6 @@ const config = (env, argv) => {
       //}),
       new webpack.DefinePlugin({
         __VERSION__: JSON.stringify(new Date().toISOString()),
-      }),
-      new ServiceWorkerWebpackPlugin({
-        entry: "./src/ui/serviceWorker.ts",
-        filename: "sw.js",
       }),
     ],
 

@@ -283,10 +283,3 @@ export class Store {
     return trackFolderList;
   }
 }
-
-/*
-- page is server by sw.js: true/false
-- another installing
-- another waiting
-
-*/
