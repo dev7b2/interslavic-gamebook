@@ -1,7 +1,5 @@
 import * as React from "react";
 
-const backgroundSize = "100% 100%";
-
 interface FrameBorderProps {
   frameBorderX: number;
   frameBorderY: number;
@@ -33,155 +31,6 @@ const QuestPlayFrameBackground: React.FC<FrameBorderProps> = ({
   </div>
 );
 
-const QuestPlayFrameTiles = ({ frameBorderX, frameBorderY }: FrameBorderProps) => {
-  const { frameWidth, frameHeight } = getFrameSize({ frameBorderX, frameBorderY });
-  return (
-    <>
-      <div
-        style={{
-          position: "absolute",
-          left: 0,
-          top: 0,
-          width: frameWidth,
-          height: frameHeight * 3,
-          // backgroundImage: "url('/questplay/frame-left-top.png')",
-          backgroundSize,
-        }}
-      />
-      <div
-        style={{
-          position: "absolute",
-          left: frameWidth,
-          top: 0,
-          width: frameWidth * 2,
-          height: frameHeight,
-          // backgroundImage: "url('/questplay/frame-left-top-2.png')",
-          backgroundSize,
-        }}
-      />
-
-      <div
-        style={{
-          position: "absolute",
-          left: frameWidth * 3,
-          right: frameWidth * 3,
-          top: 0,
-          height: frameHeight,
-          // backgroundImage: "url('/questplay/frame-top.png')",
-          backgroundSize,
-        }}
-      />
-
-      <div
-        style={{
-          position: "absolute",
-          right: frameWidth,
-          top: 0,
-          width: frameWidth * 2,
-          height: frameHeight,
-          // backgroundImage: "url('/questplay/frame-right-top-2.png')",
-          backgroundSize,
-        }}
-      />
-
-      <div
-        style={{
-          position: "absolute",
-          right: 0,
-          top: 0,
-          width: frameWidth,
-          height: frameHeight * 3,
-          // backgroundImage: "url('/questplay/frame-right-top.png')",
-          backgroundSize,
-        }}
-      />
-
-      <div
-        style={{
-          position: "absolute",
-          left: 0,
-          top: frameHeight * 3,
-          bottom: frameHeight * 3,
-          width: frameWidth,
-          // backgroundImage: "url('/questplay/frame-left.png')",
-          backgroundSize,
-        }}
-      />
-
-      <div
-        style={{
-          position: "absolute",
-          right: 0,
-          top: frameHeight * 3,
-          bottom: frameHeight * 3,
-          width: frameWidth,
-          // backgroundImage: "url('/questplay/frame-right.png')",
-          backgroundSize,
-        }}
-      />
-
-      <div
-        style={{
-          position: "absolute",
-          left: 0,
-          bottom: 0,
-          width: frameWidth,
-          height: frameHeight * 3,
-          // backgroundImage: "url('/questplay/frame-left-bottom.png')",
-          backgroundSize,
-        }}
-      />
-      <div
-        style={{
-          position: "absolute",
-          left: frameWidth,
-          bottom: 0,
-          width: frameWidth * 2,
-          height: frameHeight,
-          // backgroundImage: "url('/questplay/frame-left-bottom-2.png')",
-          backgroundSize,
-        }}
-      />
-
-      <div
-        style={{
-          position: "absolute",
-          left: frameWidth * 3,
-          right: frameWidth * 3,
-          bottom: 0,
-          height: frameHeight,
-          // backgroundImage: "url('/questplay/frame-bottom.png')",
-          backgroundSize,
-        }}
-      />
-
-      <div
-        style={{
-          position: "absolute",
-          right: frameWidth,
-          bottom: 0,
-          width: frameWidth * 2,
-          height: frameHeight,
-          // backgroundImage: "url('/questplay/frame-right-bottom-2.png')",
-          backgroundSize,
-        }}
-      />
-
-      <div
-        style={{
-          position: "absolute",
-          right: 0,
-          bottom: 0,
-          width: frameWidth,
-          height: frameHeight * 3,
-          // backgroundImage: "url('/questplay/frame-right-bottom.png')",
-          backgroundSize,
-        }}
-      />
-    </>
-  );
-};
-
 export const QuestPlayFrameImage: React.FC<
   {
     fitHeight: boolean;
@@ -207,7 +56,6 @@ export const QuestPlayFrameImage: React.FC<
       >
         {children}
       </div>
-      <QuestPlayFrameTiles frameBorderX={frameBorderX} frameBorderY={frameBorderY} />
     </div>
   );
 };
@@ -232,7 +80,6 @@ export const QuestPlayFrameText: React.FC<
       }}
     >
       <QuestPlayFrameBackground frameBorderX={frameBorderX} frameBorderY={frameBorderY} />
-      <QuestPlayFrameTiles frameBorderX={frameBorderX} frameBorderY={frameBorderY} />
       <div
         style={{
           paddingLeft: frameWidth,
