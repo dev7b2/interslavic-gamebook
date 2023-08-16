@@ -16,7 +16,6 @@ import { INDEX_JSON } from "./consts";
 import { getLang, browserDefaultLang } from "./lang";
 import { assertNever } from "../assertNever";
 
-import { OptionsTabContainer } from "./options";
 import { QuestList } from "./questList";
 import { AppNavbar } from "./appNavbar";
 import { QuestInfo } from "./questInfo";
@@ -108,15 +107,7 @@ class MainLoader extends React.Component<{}> {
 
     const { tab0, tab1, tab2 } = store.path;
 
-    if (tab0 === "options") {
-      return (
-        <div className="game-design">
-          <AppNavbar store={store}>
-            <OptionsTabContainer store={store} />
-          </AppNavbar>
-        </div>
-      );
-    } else if (tab0 === "editor") {
+    if (tab0 === "editor") {
       return (
         <EditorContainer
           questsToLoad={toJS(store.index.quests)}

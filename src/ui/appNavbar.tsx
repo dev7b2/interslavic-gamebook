@@ -14,6 +14,7 @@ import {
 import { observer } from "mobx-react";
 import { Store } from "./store";
 import { observable } from "mobx";
+import { LangButton } from "./langButton";
 
 @observer
 export class AppNavbar extends React.Component<{
@@ -45,9 +46,7 @@ export class AppNavbar extends React.Component<{
               </NavItem>
 
               <NavItem>
-                <NavLink href="#/options" active={tab0 === "options"}>
-                  <i className="fa fa-fw fa-cogs" /> {l.options}
-                </NavLink>
+                <LangButton store={this.props.store}></LangButton>
               </NavItem>
 
               <NavItem>

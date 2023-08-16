@@ -11,7 +11,7 @@ interface OptionsState {
 }
 
 @observer
-export class OptionsTabContainer extends React.Component<
+export class LangButton extends React.Component<
   {
     store: Store;
   },
