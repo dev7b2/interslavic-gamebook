@@ -12,6 +12,7 @@ export function QuestCard(props: { quest: any }) {
     >
       <h5 className="quest-card-title">{quest.gameTitle}</h5>
       <div className="age-limit">{quest.smallDescription}</div>
+      <img className="quest-logo" src={quest.imgPath} />
     </a>
   );
 }
