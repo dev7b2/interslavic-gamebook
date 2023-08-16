@@ -46,7 +46,7 @@ const RUS = {
   save: "Записати",
   saving: "Сохраняю",
 
-  welcomeHeader: "Добродошли! Разумєјеш что читаjеш? Прєкрасно. Избирај игру:",
+  welcomeHeader: "Здрав! Разумєјеш что читаjеш? Прєкрасно. Избирај игру:",
   all: "Все",
   own: "Загруженные",
   search: "Исканје квестов",
@@ -180,7 +180,7 @@ const ENG: LangTexts = {
   save: "Zapisati",
   saving: "Saving",
 
-  welcomeHeader: "Dobrodošli! Razuměješ što čitaješ? Prěkrasno. Izbiraj igru:",
+  welcomeHeader: "Zdrav! Razuměješ što čitaješ? Prěkrasno. Izbiraj igru:",
   all: "All",
   own: "Uploaded",
   search: "Iskanje kvestov",

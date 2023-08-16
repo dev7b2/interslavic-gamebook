@@ -1,7 +1,7 @@
 body {
   background-color: #a4967c !important;
   color: #3e3629;
-  font-family: -apple-system, Roboto, "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: -apple-system, "Alegreya", Roboto, "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 /* DivFadeinCss */
@@ -160,6 +160,7 @@ select.customized-select::-ms-expand {
 }
 
 .quest-card {
+  font-family: "Alegreya Sans";
   transition: all 0.5s ease-out;
   position: relative;
   display: block;
@@ -201,7 +202,13 @@ select.customized-select::-ms-expand {
   background-color: #00000012;
   font-weight: bold;
   border-radius: 10px;
-  padding: 8px;
+  padding: 4px 10px;
+}
+
+.quest-logo {
+  position: absolute;
+  bottom: 0;
+  right: 20px;
 }
 
 /* === (END) QUEST CARD === */
