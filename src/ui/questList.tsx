@@ -15,6 +15,7 @@ import { SRDateToString } from "../lib/qmplayer/funcs";
 import { QuestReplaceTags } from "./questReplaceTags";
 import { getMagicSlots } from "./questList.magicSlots";
 import { computed } from "mobx";
+import { QuestCard } from "./questCard";
 
 interface QuestListState {
   dropdownOpen: boolean;
@@ -172,28 +173,9 @@ export class QuestList extends React.Component<
 
           {this.questsToShow.length > 0 ? (
             <>
-              <div className="list-group">
+              <div className="quest-box">
                 {this.questsToShow.map((quest) => (
-                  <a
-                    href={`#/quests/${quest.gameName}`}
-                    key={quest.gameName}
-                    className="list-group-item list-group-item-action flex-column align-items-start"
-                  >
-                    <div className="d-flex w-100 justify-content-between">
-                      <h5 className="mb-1">{quest.gameTitle}</h5>
-                      <small>
-                        {quest.passedAt === undefined ? (
-                          <i className="text-muted fa fa-spin circle-o-notch" />
-                        ) : quest.passedAt !== false ? (
-                          <span>{l.passed}</span>
-                        ) : null}
-                      </small>
-                    </div>
-                    <p className="mb-1 bootstrap-style">
-                      <QuestReplaceTags str={quest.taskText} />
-                    </p>
-                    <small>{quest.smallDescription}</small>
-                  </a>
+                  <QuestCard quest={quest}></QuestCard>
                 ))}
               </div>
             </>
