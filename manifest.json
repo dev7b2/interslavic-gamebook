@@ -1,7 +1,7 @@
 {
-  "name": "Čarovna kniga",
-  "short_name": "Čarovna kniga",
-  "description": "Čarovna kniga. Medžuslovjanska kniga-igra",
+  "name": "Igry na medžuslovjanskom",
+  "short_name": "MS-Igry",
+  "description": "Igry na medžuslovjanskom",
   "start_url": "./#/",
   "display": "standalone",
   "theme_color": "#ffffff",
