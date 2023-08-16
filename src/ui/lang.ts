@@ -38,7 +38,8 @@ const RUS = {
   backButtonDisabled: "Изкључена",
   backButtonEnabled: "Вкључена (режим хытреца)",
 
-  lang: "Азбука/Azbuka",
+  lang: "Азбука",
+  alphabet: "Абв",
   rus: "Кирилица",
   eng: "Latinica",
 
@@ -171,14 +172,15 @@ const ENG: LangTexts = {
   backButtonDisabled: "Izključena",
   backButtonEnabled: "Vključena (režim hytreca)",
 
-  lang: "Азбука/Azbuka",
+  lang: "Azbuka",
+  alphabet: "Abc",
   rus: "Кирилица",
   eng: "Latinica",
 
   save: "Zapisati",
   saving: "Saving",
 
-  welcomeHeader: "ČAROVNA KNIGA (onlajnova igra)",
+  welcomeHeader: "Dobrodošli! Razuměješ što čitaješ? Prěkrasno. Izbiraj igru:",
   all: "All",
   own: "Uploaded",
   search: "Iskanje kvestov",
