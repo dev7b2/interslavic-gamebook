@@ -180,7 +180,7 @@ const ENG: LangTexts = {
   save: "Zapisati",
   saving: "Saving",
 
-  welcomeHeader: "Zdrav! Razuměješ što čitaješ? Prěkrasno. Izbiraj igru:",
+  welcomeHeader: "Zdrav! Razuměješ čto čitaješ? Prěkrasno. Izbiraj igru:",
   all: "All",
   own: "Uploaded",
   search: "Iskanje kvestov",
