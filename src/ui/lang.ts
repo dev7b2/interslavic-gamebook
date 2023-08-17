@@ -2,7 +2,8 @@ import { Lang } from "../lib/qmplayer/player";
 import { assertNever } from "../assertNever";
 
 const RUS = {
-  hi: "Поздрав, путник!",
+  hi: "Поздрав!",
+  ageLimitWarning: "А тебе точно же есть 18 лет?",
   menu: "Меню",
   quests: "Квесты",
   options: "Настројкы",
@@ -46,7 +47,7 @@ const RUS = {
   save: "Записати",
   saving: "Сохраняю",
 
-  welcomeHeader: "Здрав! Разумєјеш что читаjеш? Прєкрасно. Избирај игру:",
+  welcomeHeader: "Разумєјеш что читаjеш? Прєкрасно. Избирај игру:",
   all: "Все",
   own: "Загруженные",
   search: "Исканје квестов",
@@ -136,7 +137,8 @@ const RUS = {
 export type LangTexts = typeof RUS;
 
 const ENG: LangTexts = {
-  hi: "Pozdrav, putnik!",
+  hi: "Pozdrav!",
+  ageLimitWarning: "А тебе точно есть 18 лет?",
   menu: "Menu",
   quests: "Kvesty",
   options: "Nastrojky",
@@ -180,7 +182,7 @@ const ENG: LangTexts = {
   save: "Zapisati",
   saving: "Saving",
 
-  welcomeHeader: "Zdrav! Razuměješ čto čitaješ? Prěkrasno. Izbiraj igru:",
+  welcomeHeader: "Razuměješ čto čitaješ? Prěkrasno. Izbiraj igru:",
   all: "All",
   own: "Uploaded",
   search: "Iskanje kvestov",
