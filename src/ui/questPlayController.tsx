@@ -20,7 +20,6 @@ import { Store } from "./store";
 import { QuestPlay } from "./questPlay/questPlay";
 import { toJS } from "mobx";
 import { ErrorInfo } from "./common";
-import { Progress } from "reactstrap";
 import { toggleFullscreen } from "./questPlay/fullscreen";
 
 interface QuestPlayState {
@@ -136,7 +135,6 @@ export class QuestPlayController extends React.Component<
           <div className="text-center">
             {l.loadingQuest} {percents}%
           </div>
-          <Progress value={percents} />
         </div>
       );
     }
