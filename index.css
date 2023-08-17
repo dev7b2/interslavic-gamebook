@@ -12442,7 +12442,7 @@ body {
 /* ========== (END) OVERRIDE BOOTSTRAP CONROLS ========== */
 
 .quest-play-frame {
-  border: 3px solid #3e3629;
+  border-bottom: 3px solid #3e3629;
 }
 
 .qm-editor {
@@ -12620,6 +12620,8 @@ select.customized-select::-ms-expand {
 }
 
 .game-root {
+  max-width: 920px;
+  margin: 0 auto;
   font-weight: bold;
   color: #3e3629;
 }
@@ -12641,11 +12643,6 @@ select.customized-select::-ms-expand {
 }
 .game-root .game-clr {
   color: #825a10;
-}
-
-.rcs-inner-handle.rcs-inner-handle {
-  background-color: #3e3629;
-  border-radius: 6px;
 }
 
 .gameplay-button {
