@@ -247,7 +247,7 @@ export function QuestPlay({
         return (
           <div key={choice.jumpId} className={isMobile ? "mb-4" : "mb-3"}>
             <a
-              href={location.href}
+              href="javascript:void(0)"
               onClick={(e) => {
                 e.preventDefault();
                 if (!choice.active) {
