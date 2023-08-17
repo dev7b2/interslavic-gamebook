@@ -1,18 +1,10 @@
 import * as React from "react";
-import { Loader, DivFadeinCss } from "./common";
-import { LangTexts } from "./lang";
-import { WonProofs } from "./db/defs";
-import { Player, Lang } from "../lib/qmplayer/player";
-import { Index, Game } from "../packGameData/defs";
-import { ButtonDropdown, DropdownMenu, DropdownToggle, DropdownItem, Progress } from "reactstrap";
+import { DivFadeinCss } from "./common";
 import { observer } from "mobx-react";
-import { Store, QUEST_SEARCH_ALL, QUEST_SEARCH_OWN } from "./store";
+import { Store, QUEST_SEARCH_ALL } from "./store";
 
 import { AppNavbar } from "./appNavbar";
 import { getGameTaskText } from "../lib/getGameTaskText";
-import { DEFAULT_DAYS_TO_PASS_QUEST } from "../lib/qmplayer/defs";
-import { SRDateToString } from "../lib/qmplayer/funcs";
-import { QuestReplaceTags } from "./questReplaceTags";
 import { getMagicSlots } from "./questList.magicSlots";
 import { computed } from "mobx";
 import { QuestCard } from "./questCard";
@@ -157,18 +149,15 @@ export class QuestList extends React.Component<
   render() {
     const { l } = this.props.store;
 
-    const store = this.props.store;
-
-    const allQuestsForThisUser = this.allQuestsForThisUser;
-    const allQuestsForThisUserPassed = this.allQuestsForThisUser.filter((quest) => quest.passedAt);
-
-    // console.info(allGamesInPseudoRandomOrder, passedGamesInPassingOrder, proposedSlots);
-
     return (
       <AppNavbar store={this.props.store}>
         <DivFadeinCss key="quest list" className="container mb-5">
-          <div className="text-center mb-3">
-            <h5>{l.welcomeHeader}</h5>
+          <div className="text-center mb-5 mt-5">
+            <h5 className="welcome-message">
+              {l.hi}
+              <br />
+              {l.welcomeHeader}
+            </h5>
           </div>
 
           {this.questsToShow.length > 0 ? (
