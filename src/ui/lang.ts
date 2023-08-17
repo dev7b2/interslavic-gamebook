@@ -8,7 +8,7 @@ const RUS = {
   quests: "Квесты",
   options: "Настројкы",
   installMode: "Приложение",
-  installModeInstalling: "Инициализација",
+  installModeInstalling: "Loading...",
   installModeNeedReload: "Готово обновление",
   login: "Войти",
   useown: "Загрузить .qm/.qmm",
@@ -59,11 +59,11 @@ const RUS = {
   startFromTheStart: "Начети изнова",
   startFromLastSave: "Загрузить сохранение",
   noLastSave: "Немаjе схрањенја",
-  loading: "Инициализација", //
-  loadingIndex: "Инициализација индекса", //
-  loadingLocalDatabase: "Инициализација базы данных", //
+  loading: "Loading...",
+  loadingIndex: "Loading...",
+  loadingLocalDatabase: "Loading...",
 
-  loadingQuest: "Инициализација квеста", //
+  loadingQuest: "Loading...",
 
   restart: "Начети изнова",
   stepBack: "Шаг назад",
@@ -143,7 +143,7 @@ const ENG: LangTexts = {
   quests: "Kvesty",
   options: "Nastrojky",
   installMode: "Application",
-  installModeInstalling: "Inicializacija",
+  installModeInstalling: "Loading...",
   installModeNeedReload: "Update ready",
   login: "Log in",
   useown: "Upload .qm/.qmm",
@@ -194,11 +194,11 @@ const ENG: LangTexts = {
   startFromTheStart: "Načeti iznova",
   startFromLastSave: "Start saving",
   noLastSave: "Nemaje shranjenja",
-  loading: "Inicializacija",
-  loadingIndex: "Inicializacija indeksa",
-  loadingLocalDatabase: "Inicializacija bazy dannyh",
+  loading: "Loading...",
+  loadingIndex: "Loading...",
+  loadingLocalDatabase: "Loading...",
 
-  loadingQuest: "Inicializacija kvestov",
+  loadingQuest: "Loading...",
 
   restart: "Načeti iznova",
   stepBack: "Step back",
