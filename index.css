@@ -12441,10 +12441,6 @@ body {
 
 /* ========== (END) OVERRIDE BOOTSTRAP CONROLS ========== */
 
-.quest-play-frame {
-  border-bottom: 3px solid #3e3629;
-}
-
 .game-root-wrapper {
   display: flex;
   flex-direction: column;
