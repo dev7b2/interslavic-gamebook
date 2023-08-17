@@ -148,6 +148,14 @@ export class QuestList extends React.Component<
 
   render() {
     const { l } = this.props.store;
+    const handleCardClick = (gameName: string) => {
+      this.props.store.db
+        .saveGame(gameName, null) // reset saved game data
+        .then(() => {
+          location.hash = `/quests/${gameName}/play`;
+        })
+        .catch((e) => console.error(e));
+    };
 
     return (
       <AppNavbar store={this.props.store}>
@@ -164,7 +172,14 @@ export class QuestList extends React.Component<
             <>
               <div className="quest-box">
                 {this.questsToShow.map((quest) => (
-                  <QuestCard quest={quest}></QuestCard>
+                  <QuestCard
+                    quest={quest}
+                    onClick={(e: Event) => {
+                      e.preventDefault();
+
+                      handleCardClick(quest.gameName);
+                    }}
+                  ></QuestCard>
                 ))}
               </div>
             </>
