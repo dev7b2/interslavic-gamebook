@@ -340,16 +340,81 @@ export function QuestPlay({
   ) : null;
 
   return (
-    <div
-      style={{
-        minHeight: "100vh",
-        backgroundColor: "#a4967c",
-        backgroundSize: "cover",
-        backgroundPosition: "70% 0px",
-      }}
-      className="game-root"
-    >
+    <>
       <div
+        style={{
+          backgroundColor: "#a4967c",
+        }}
+        className="game-root"
+      >
+        <div
+          style={{
+            display: imageUrl ? undefined : "none",
+          }}
+        >
+          <QuestPlayFrameImage
+            fitHeight={false}
+            frameBorderX={frameBorderX}
+            frameBorderY={frameBorderY}
+          >
+            <QuestPlayImageMobile src={imageUrl} allImagesUrls={allImagesUrls} />
+          </QuestPlayFrameImage>
+        </div>
+        <div style={{}}>
+          <QuestPlayFrameText
+            fitHeight={false}
+            frameBorderX={frameBorderX}
+            frameBorderY={frameBorderY}
+          >
+            <div style={{ padding: 5 }}>{locationText}</div>
+          </QuestPlayFrameText>
+        </div>
+
+        <div
+          style={{
+            display: paramsStrings.filter((x) => x.trim()).length > 0 ? undefined : "none",
+          }}
+        >
+          <QuestPlayFrameText
+            fitHeight={false}
+            frameBorderX={frameBorderX}
+            frameBorderY={frameBorderY}
+          >
+            <div
+              style={{
+                padding: 5,
+              }}
+            >
+              {params}
+            </div>
+          </QuestPlayFrameText>
+        </div>
+        <div style={{}}>
+          <QuestPlayFrameText
+            fitHeight={false}
+            frameBorderX={frameBorderX}
+            frameBorderY={frameBorderY}
+          >
+            <div style={{ padding: 5 }}>{choices}</div>
+          </QuestPlayFrameText>
+        </div>
+
+        {reallyRestartContent && (
+          <div
+            style={{
+              position: "fixed",
+              right: "5%",
+              left: "5%",
+              bottom: "30%",
+              top: "30%",
+            }}
+          >
+            {reallyRestartContent}
+          </div>
+        )}
+      </div>
+      <div
+        className="game-buttons-box"
         style={{
           display: "flex",
           justifyContent: "center",
@@ -369,71 +434,6 @@ export function QuestPlay({
           {exitButtonContent}
         </GamePlayButton>
       </div>
-      <div
-        style={{
-          display: imageUrl ? undefined : "none",
-        }}
-      >
-        <QuestPlayFrameImage
-          fitHeight={false}
-          frameBorderX={frameBorderX}
-          frameBorderY={frameBorderY}
-        >
-          <QuestPlayImageMobile src={imageUrl} allImagesUrls={allImagesUrls} />
-        </QuestPlayFrameImage>
-      </div>
-      <div style={{}}>
-        <QuestPlayFrameText
-          fitHeight={false}
-          frameBorderX={frameBorderX}
-          frameBorderY={frameBorderY}
-        >
-          <div style={{ padding: 5 }}>{locationText}</div>
-        </QuestPlayFrameText>
-      </div>
-
-      <div
-        style={{
-          display: paramsStrings.filter((x) => x.trim()).length > 0 ? undefined : "none",
-        }}
-      >
-        <QuestPlayFrameText
-          fitHeight={false}
-          frameBorderX={frameBorderX}
-          frameBorderY={frameBorderY}
-        >
-          <div
-            style={{
-              padding: 5,
-            }}
-          >
-            {params}
-          </div>
-        </QuestPlayFrameText>
-      </div>
-      <div style={{}}>
-        <QuestPlayFrameText
-          fitHeight={false}
-          frameBorderX={frameBorderX}
-          frameBorderY={frameBorderY}
-        >
-          <div style={{ padding: 5 }}>{choices}</div>
-        </QuestPlayFrameText>
-      </div>
-
-      {reallyRestartContent && (
-        <div
-          style={{
-            position: "fixed",
-            right: "5%",
-            left: "5%",
-            bottom: "30%",
-            top: "30%",
-          }}
-        >
-          {reallyRestartContent}
-        </div>
-      )}
-    </div>
+    </>
   );
 }

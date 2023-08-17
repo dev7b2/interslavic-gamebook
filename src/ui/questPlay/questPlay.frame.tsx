@@ -11,26 +11,6 @@ function getFrameSize({ frameBorderX, frameBorderY }: FrameBorderProps) {
   return { frameWidth, frameHeight };
 }
 
-const QuestPlayFrameBackground: React.FC<FrameBorderProps> = ({
-  children,
-  frameBorderX,
-  frameBorderY,
-}) => (
-  <div
-    className="quest-play-frame"
-    style={{
-      position: "absolute",
-      left: frameBorderX,
-      top: frameBorderY,
-      right: frameBorderX,
-      bottom: frameBorderY,
-      backgroundColor: "#a4967c",
-    }}
-  >
-    {children}
-  </div>
-);
-
 export const QuestPlayFrameImage: React.FC<
   {
     fitHeight: boolean;
@@ -44,7 +24,6 @@ export const QuestPlayFrameImage: React.FC<
         position: "relative",
       }}
     >
-      <QuestPlayFrameBackground frameBorderX={frameBorderX} frameBorderY={frameBorderY} />
       <div
         style={{
           paddingLeft: frameBorderX,
@@ -79,7 +58,6 @@ export const QuestPlayFrameText: React.FC<
         minHeight: 100,
       }}
     >
-      <QuestPlayFrameBackground frameBorderX={frameBorderX} frameBorderY={frameBorderY} />
       <div
         style={{
           paddingLeft: frameWidth,

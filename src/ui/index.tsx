@@ -134,7 +134,7 @@ class MainLoader extends React.Component<{}> {
           );
         } else {
           return (
-            <div className="game-design">
+            <div className="game-design game-root-wrapper">
               <QuestPlayController key={tab1} store={store} gameName={tab1} />
             </div>
           );
