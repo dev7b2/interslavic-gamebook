@@ -12589,6 +12589,28 @@ select.customized-select::-ms-expand {
 
 /* === (END) QUEST CARD === */
 
+.welcome-message {
+  font-size: 32px;
+  color: #56503f;
+}
+
+.lang-button-box {
+  position: absolute;
+  right: 8px;
+  top: 8px
+}
+
+.lang-button-box .lang-button {
+  transition: color 250ms ease-in;
+  font-size: 20px;
+  color: #3e362966;
+}
+
+@media only screen and (min-width: 1023px) {
+  .lang-button-box .lang-button {
+    font-size: 28px;
+  }
+}
 .game-text {
   white-space: pre-wrap;
 }
