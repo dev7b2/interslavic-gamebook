@@ -12445,6 +12445,12 @@ body {
   border-bottom: 3px solid #3e3629;
 }
 
+.game-root-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 .qm-editor {
   background-color: #fff;
 }
@@ -12620,6 +12626,7 @@ select.customized-select::-ms-expand {
 }
 
 .game-root {
+  flex-grow: 1;
   max-width: 920px;
   margin: 0 auto;
   font-weight: bold;
