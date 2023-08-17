@@ -304,32 +304,6 @@ export function QuestPlay({
     </>
   );
 
-  const musicAndSound = (
-    <>
-      {isMusic ? (
-        uistate.trackName ? (
-          <Music
-            urls={[transformMedianameToUrl(uistate.trackName, "track")]}
-            key={uistate.trackName}
-          />
-        ) : defaultMusicList ? (
-          <Music
-            urls={defaultMusicList.map(
-              (fileName) =>
-                // defaultMusicList is provided as list of ["music/trackName.mp3"]
-                // so transformMedianameToUrl will not work
-                DATA_DIR + fileName,
-            )}
-          />
-        ) : null
-      ) : null}
-
-      {isMusic && uistate.soundName ? (
-        <Sound url={transformMedianameToUrl(uistate.soundName, "sound")} />
-      ) : null}
-    </>
-  );
-
   const frameBorderX = isMobile ? FRAME_BORDER_MOBILE_X : FRAME_BORDER_DESKTOP_X;
   const frameBorderY = isMobile ? FRAME_BORDER_MOBILE_Y : FRAME_BORDER_DESKTOP_Y;
 
@@ -365,190 +339,16 @@ export function QuestPlay({
     </QuestPlayFrameText>
   ) : null;
 
-  if (!isMobile) {
-    const IMAGE_SIZE_X = NATIVE_IMAGE_SIZE_X + 2 * frameBorderX;
-    const IMAGE_SIZE_Y = NATIVE_IMAGE_SIZE_Y + 2 * frameBorderY;
-
-    return (
-      <div
-        style={{
-          height: "100vh",
-          position: "relative",
-          // backgroundImage: "url('/questplay/background.jpg')",
-          backgroundColor: "#a4967c",
-          backgroundSize: "cover",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "stretch",
-        }}
-        className="game-root"
-      >
-        {musicAndSound}
-        <div
-          style={{
-            maxWidth: MAX_DESKTOP_WIDTH,
-            width: "100%",
-            height: "100%",
-            position: "relative",
-          }}
-        >
-          <div
-            style={{
-              position: "absolute",
-              left: 0,
-              top: 0,
-              width: `calc(100% - ${IMAGE_SIZE_X}px)`,
-              height: `calc(${IMAGE_SIZE_Y}px)`,
-            }}
-          >
-            <QuestPlayFrameText
-              fitHeight={true}
-              frameBorderX={frameBorderX}
-              frameBorderY={frameBorderY}
-            >
-              <div style={{ padding: 5, paddingBottom: 10, height: "100%" }}>
-                <ScrollableContainer key={uistate.text}>{locationText}</ScrollableContainer>
-              </div>
-            </QuestPlayFrameText>
-          </div>
-
-          <div
-            style={{
-              position: "absolute",
-              left: 0,
-              bottom: 0,
-              width: `calc(100% - ${IMAGE_SIZE_X}px)`,
-              height: `calc(100% - ${IMAGE_SIZE_Y}px)`,
-            }}
-          >
-            <QuestPlayFrameText
-              fitHeight={true}
-              frameBorderX={frameBorderX}
-              frameBorderY={frameBorderY}
-            >
-              <div style={{ padding: 5, paddingBottom: 10, height: "100%" }}>
-                <ScrollableContainer
-                  key={uistate.choices.map((c) => `${c.text} ${c.jumpId} ${c.active}`).join("#")}
-                >
-                  {choices}
-                </ScrollableContainer>
-              </div>
-            </QuestPlayFrameText>
-          </div>
-
-          <div
-            style={{
-              position: "absolute",
-              right: 0,
-              top: 0,
-              width: `calc(${IMAGE_SIZE_X}px)`,
-              height: `calc(${IMAGE_SIZE_Y}px)`,
-            }}
-          >
-            <QuestPlayFrameImage
-              fitHeight={true}
-              frameBorderX={frameBorderX}
-              frameBorderY={frameBorderY}
-            >
-              <QuestPlayImageDesktop src={imageUrl} allImagesUrls={allImagesUrls} />
-            </QuestPlayFrameImage>
-          </div>
-
-          <div
-            style={{
-              position: "absolute",
-              right: 0,
-              bottom: 0,
-              width: `calc(${IMAGE_SIZE_X}px)`,
-              height: `calc(100% - ${IMAGE_SIZE_Y}px)`,
-            }}
-          >
-            <QuestPlayFrameText
-              fitHeight={true}
-              frameBorderX={frameBorderX}
-              frameBorderY={frameBorderY}
-            >
-              <div style={{ position: "relative", padding: 5, paddingBottom: 60, height: "100%" }}>
-                <ScrollableContainer
-                  // No key here
-                  key="params"
-                  forceMeRecalculateHeight={paramsStrings}
-                  //key={uistate.paramsState.map((p) => p).join("#")}
-                >
-                  <div
-                    style={{
-                      minHeight: "100%",
-                      display: "flex",
-                      flexDirection: "column",
-                      justifyContent: "center",
-                    }}
-                  >
-                    {params}
-                    {
-                      // Just for testing
-                      new Array(0).fill(0).map((_, i) => (
-                        <div style={{ border: "1px solid green" }}>{i}</div>
-                      ))
-                    }
-                  </div>
-                </ScrollableContainer>
-                <div className="gameplay-buttons">
-                  <GamePlayButton ariaLabel={l.restart} onClick={onRestartButtonClick}>
-                    {restartButtonContent}
-                  </GamePlayButton>
-                  {player.allowBackButton && (
-                    <GamePlayButton
-                      disabled={previousGameState === null}
-                      onClick={onBackButtonClick}
-                      ariaLabel={l.stepBack}
-                    >
-                      {backButtonContent}
-                    </GamePlayButton>
-                  )}
-                  <GamePlayButton onClick={onMusicButtonClick} ariaLabel={l.toggleMusic}>
-                    {musicButtonContent}
-                  </GamePlayButton>
-                  <GamePlayButton onClick={onFullscreenButtonClick} ariaLabel={l.toggleFullscreen}>
-                    {fullscreenButtonContent}
-                  </GamePlayButton>
-                  <GamePlayButton onClick={onExit} ariaLabel={l.exit}>
-                    {exitButtonContent}
-                  </GamePlayButton>
-                </div>
-              </div>
-            </QuestPlayFrameText>
-          </div>
-        </div>
-
-        {reallyRestartContent && (
-          <div
-            style={{
-              position: "absolute",
-              right: "30%",
-              left: "30%",
-              bottom: "30%",
-              top: "30%",
-            }}
-          >
-            {reallyRestartContent}
-          </div>
-        )}
-      </div>
-    );
-  }
-
   return (
     <div
       style={{
         minHeight: "100vh",
-        // backgroundImage: "url('/questplay/background.jpg')",
         backgroundColor: "#a4967c",
         backgroundSize: "cover",
         backgroundPosition: "70% 0px",
       }}
       className="game-root"
     >
-      {musicAndSound}
       <div
         style={{
           display: "flex",
@@ -556,9 +356,6 @@ export function QuestPlay({
           padding: 10,
         }}
       >
-        <GamePlayButton onClick={onRestartButtonClick} ariaLabel={l.restart}>
-          {restartButtonContent}
-        </GamePlayButton>
         {player.allowBackButton && (
           <GamePlayButton
             disabled={previousGameState === null}
@@ -568,12 +365,6 @@ export function QuestPlay({
             {backButtonContent}
           </GamePlayButton>
         )}
-        <GamePlayButton onClick={onMusicButtonClick} ariaLabel={l.toggleMusic}>
-          {musicButtonContent}
-        </GamePlayButton>
-        <GamePlayButton onClick={onFullscreenButtonClick} ariaLabel={l.toggleFullscreen}>
-          {fullscreenButtonContent}
-        </GamePlayButton>
         <GamePlayButton onClick={onExit} ariaLabel={l.exit}>
           {exitButtonContent}
         </GamePlayButton>

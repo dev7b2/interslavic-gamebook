@@ -185,7 +185,7 @@ export class QuestPlayController extends React.Component<
           // exit from fullscreen mode
           toggleFullscreen(false);
 
-          location.hash = `/quests/${this.props.gameName}`;
+          location.hash = `/quests`;
         }}
         busySaving={!!this.state.thinkingSavingWin}
         showTaskInfoOnQuestStart={false}
