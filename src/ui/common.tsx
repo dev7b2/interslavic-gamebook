@@ -61,8 +61,7 @@ export class Loader extends React.Component<
 > {
   render() {
     return (
-      <DivFadeinCss className="p-3 text-center">
-        <i className="fa fa-spinner fa-spin" />
+      <DivFadeinCss className="text-center mt-5">
         {this.props.text ? <span> {this.props.text}...</span> : null}
       </DivFadeinCss>
     );
