@@ -23,22 +23,6 @@ export class LangButton extends React.Component<
   };
   render() {
     const l = this.props.store.l;
-    const updatePlayer = <K extends keyof Player>(key: K, value: Player[K]) => {
-      this.setState(
-        {
-          player: {
-            ...this.state.player,
-            [key]: value,
-          },
-        },
-        () => saveDataToDB(),
-      );
-    };
-    const toggleLanguage = () => {
-      const newLang = this.state.player.lang === "rus" ? "eng" : "rus";
-
-      updatePlayer("lang", newLang);
-    };
     const saveDataToDB = () => {
       this.setState({
         busy: true,
@@ -59,6 +43,22 @@ export class LangButton extends React.Component<
           busy: false,
         });
       })().catch((e) => location.reload());
+    };
+    const updatePlayer = <K extends keyof Player>(key: K, value: Player[K]) => {
+      this.setState(
+        {
+          player: {
+            ...this.state.player,
+            [key]: value,
+          },
+        },
+        () => saveDataToDB(),
+      );
+    };
+    const toggleLanguage = () => {
+      const newLang = this.state.player.lang === "rus" ? "eng" : "rus";
+
+      updatePlayer("lang", newLang);
     };
 
     return (
