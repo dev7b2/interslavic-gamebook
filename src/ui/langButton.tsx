@@ -63,7 +63,7 @@ export class LangButton extends React.Component<
 
     return (
       <button
-        className="btn"
+        className="btn lang-button"
         aria-label={l.lang}
         onClick={toggleLanguage}
         disabled={this.state.busy}
