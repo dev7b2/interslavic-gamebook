@@ -1,10 +1,10 @@
 {
   "quests": [
     {
-      "filename": "qm/gusi-lebedi.qmm.gz",
+      "filename": "qm/gusi-cyr.qmm.gz",
       "taskText": "Квест по мотивам русскоj народноj сказкы.",
       "smallDescription": "0+",
-      "gameName": "Gusi-labedi-cyr",
+      "gameName": "Gusi-cyr",
       "gameTitle": "Гуси-лабеди",
       "bgColor": "#97b8c5",
       "imgPath": "data/img/bird.svg",
@@ -16,7 +16,7 @@
       "filename": "qm/baba-yaga.qmm.gz",
       "taskText": "Kvest po motivam russkoj narodnoj skazky.",
       "smallDescription": "0+",
-      "gameName": "Gusi-labedi-lat",
+      "gameName": "Gusi-lat",
       "gameTitle": "Gusi-labedi",
       "bgColor": "#97b8c5",
       "imgPath": "data/img/bird.svg",
@@ -42,7 +42,7 @@
       "smallDescription": "18+",
       "gameName": "MS",
       "gameTitle": "Дракула",
-      "bgColor": "#85120d",
+      "bgColor": "#c51f18",
       "imgPath": "data/img/vampire.svg",
       "hardness": 18,
       "questOrigin": "КР 1",
