@@ -27,7 +27,21 @@ import { Store } from "./store";
 import { getGameTaskText } from "../lib/getGameTaskText";
 import { toggleFullscreen } from "./questPlay/fullscreen";
 
+function BackButton({ title }: { title: string }) {
+  return (
+    <button
+      className={classnames("btn btn-block btn-ligth mb-2")}
+      onClick={async () => {
+        location.hash = `/quests`;
+      }}
+    >
+      <i className="fa fa-reply" /> <span className="button-text">{title}</span>
+    </button>
+  );
+}
+
 interface QuestInfoState {
+  accessDenied?: boolean;
   lastSavedGameState?: GameState | null;
   error?: string | Error;
 }
@@ -41,6 +55,7 @@ export class QuestInfo extends React.Component<
   QuestInfoState
 > {
   state: QuestInfoState = {};
+
   componentDidMount() {
     this.props.store.db
       .getLocalSaving(this.props.gameName)
@@ -62,6 +77,39 @@ export class QuestInfo extends React.Component<
     if (!game) {
       return <Redirect to="#/" />;
     }
+    const denyAccess = () =>
+      this.setState({
+        ...this.state,
+        accessDenied: true,
+      });
+
+    if (this.state.accessDenied) {
+      return (
+        <>
+          <div>Это было očekyvano...</div>
+          <div className="row">
+            <div className="col-md-4">
+              <BackButton title={l.backToList}></BackButton>
+            </div>
+          </div>
+        </>
+      );
+    }
+
+    if (game.hardness === 18) {
+      return (
+        <div>
+          <div>{l.ageLimitWarning}</div>
+          <div>
+            <button className="btn">Да, мне 18</button>
+            <button className="btn" onClick={denyAccess}>
+              Мне меньше 18
+            </button>
+          </div>
+        </div>
+      );
+    }
+
     const passedQuest = this.props.store.wonProofs
       ? this.props.store.wonProofs.get(gameName)
       : null;
@@ -149,7 +197,6 @@ export class QuestInfo extends React.Component<
                     location.hash = `/quests/${gameName}/play`;
                   })
                   .catch((e) => console.error(e));
-                toggleFullscreen(true);
               }}
             >
               <i className="fa fa-rocket" />{" "}
@@ -164,7 +211,6 @@ export class QuestInfo extends React.Component<
               })}
               onClick={() => {
                 location.hash = `/quests/${gameName}/play`;
-                toggleFullscreen(true);
               }}
             >
               {this.state.lastSavedGameState === undefined ? (
