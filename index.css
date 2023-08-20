@@ -12373,6 +12373,10 @@ a.text-dark:hover, a.text-dark:focus {
   clip: auto;
 }
 
+html, body, #root {
+  height: 100%;
+}
+
 body {
   background-color: #a4967c !important;
   color: #3e3629;
@@ -12442,9 +12446,9 @@ body {
 /* ========== (END) OVERRIDE BOOTSTRAP CONROLS ========== */
 
 .game-root-wrapper {
+  height: 100%;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
 }
 
 .qm-editor {
