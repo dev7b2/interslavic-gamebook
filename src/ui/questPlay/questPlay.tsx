@@ -263,7 +263,7 @@ export function QuestPlay({
                     () =>
                       window.scrollTo({
                         left: 0,
-                        top: 58,
+                        top: 0,
                         behavior: "smooth",
                       }),
                     10,
