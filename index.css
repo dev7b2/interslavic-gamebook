@@ -12378,9 +12378,11 @@ html, body, #root {
 }
 
 body {
+  display: flex;
+  flex-direction: column;
   background-color: #a4967c !important;
   color: #3e3629;
-  font-family: -apple-system, "Alegreya", Roboto, "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: -apple-system, "Alegreya", sans-serif;
 }
 
 /* DivFadeinCss */
@@ -12594,6 +12596,23 @@ select.customized-select::-ms-expand {
 }
 
 /* === (END) QUEST CARD === */
+
+.error-feedback-link {
+  transition: opacity 250ms ease-in;
+  text-decoration: none;
+  opacity: 0.3;
+}
+
+.error-feedback-link:hover {
+  opacity: 0.5;
+}
+.error-feedback-link:focus {
+  opacity: 0.6;
+}
+
+.error-feedback-icon {
+  width: 50px;
+}
 
 .welcome-message {
   font-size: 32px;
