@@ -21,6 +21,7 @@ import { QuestPlay } from "./questPlay/questPlay";
 import { toJS } from "mobx";
 import { ErrorInfo } from "./common";
 import { toggleFullscreen } from "./questPlay/fullscreen";
+import { translateGameToLat } from "../lib/translit/translateGameToLat";
 
 interface QuestPlayState {
   quest?: Quest;
@@ -49,6 +50,10 @@ export class QuestPlayController extends React.Component<
 
   componentDidMount() {
     this.loadData().catch((e) => this.setState({ error: e }));
+  }
+
+  isLatin(): boolean {
+    return this.props.store.player.lang === "eng";
   }
 
   async loadData() {
@@ -91,7 +96,8 @@ export class QuestPlayController extends React.Component<
       };
       xhr.send();
     });
-    const quest = parse(Buffer.from(pako.ungzip(Buffer.from(questArrayBuffer)))) as Quest;
+    const parsedQuest = parseQuest(questArrayBuffer);
+    const quest = this.isLatin() ? translateGameToLat(parsedQuest) : parsedQuest;
 
     const gameState = await this.props.store.db.getLocalSaving(this.props.gameName);
 
@@ -192,6 +198,10 @@ export class QuestPlayController extends React.Component<
       />
     );
   }
+}
+
+function parseQuest(questArrayBuffer: ArrayBuffer): Quest {
+  return parse(Buffer.from(pako.ungzip(Buffer.from(questArrayBuffer)))) as Quest;
 }
 
 function removeSerialEmptyStrings(input: string[]) {
